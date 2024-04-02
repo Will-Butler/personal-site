@@ -6,6 +6,7 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --title-line-height: calc(-.6 * 0.5em);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -34,6 +35,8 @@ li.slide {
   position: relative;
 }
 
+/* HOME SECTION */
+
 .home {
   overflow: hidden;
   position: relative;
@@ -41,17 +44,20 @@ li.slide {
 }
 
 .home-first-name {
+  margin-top: var(--title-line-height);
   position: absolute;
-  margin-top: 2vh;
   margin-left: 2vh;
-  font-size: 300px;
+  font-size: 370px;
+  text-shadow: -1px 3px 2px black;
 }
 
 .home-last-name {
-  margin-top: 60vh;
-  margin-left: 40vh;
+  margin-top: 45vh;
+  margin-left: 50vh;
+  position: absolute;
   color: white;
-  font-size: 300px;
+  font-size: 420px;
+  text-shadow: -1px 3px 2px black;
 }
 
 .bg-img{
@@ -62,9 +68,102 @@ li.slide {
   object-fit: cover;
 }
 
+.home-attribute-container {
+  display: grid;
+  position: absolute;
+  margin-left: 10vh;
+  margin-top: 47vh;
+}
+
+.home-attribute-title {
+  font-size: 25px;
+  position: relative;
+}
+
+.home-current-status {
+  font-size: 20px;
+  position: relative;
+  color: white;
+}
+
 .no-show {
   display: none;
 }
+
+/* ABOUT SECTION */
+
+.about {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+.about__header-container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  position: relative;
+  width: 100%;
+}
+.about__headshot {
+  border-radius: 50%;
+  max-width: 400px;
+  max-height: 500px;
+  object-fit: contain;
+  position: relative;
+  margin: 10vh 2vw;
+}
+
+.about__title-media-container {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+}
+.about__title {
+  font-size: 170px;
+  text-shadow: -1px 3px 2px black;
+  width: 75%;
+  margin: 0 10vw;
+}
+
+.about__media-icons-container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.about__icon {
+  max-width: 500px;
+  min-width: 100px;
+  height: auto;
+  margin: 0 4vh;
+}
+
+.about__content-container {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  margin: 0 5vh 0 5vw;
+}
+.about__content-section {
+  margin: 10px 0px;
+  font-size: 32px;
+  text-align: center;
+}
+
+
+
+
+
 /* color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
