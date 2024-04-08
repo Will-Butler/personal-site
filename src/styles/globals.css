@@ -124,6 +124,7 @@ li.slide {
   align-items: center;
   position: relative;
 }
+
 .about__title {
   font-size: 170px;
   text-shadow: -1px 3px 2px black;
@@ -140,10 +141,17 @@ li.slide {
 }
 
 .about__icon {
-  max-width: 500px;
+  max-width: 120px;
   min-width: 100px;
   height: auto;
   margin: 0 4vh;
+  transition: all 0.5s ease-out;
+}
+
+.about__icon:hover {
+  background-color: black;
+  color: white;
+  width: 120px;
 }
 
 .about__content-container {
@@ -158,6 +166,140 @@ li.slide {
   margin: 10px 0px;
   font-size: 32px;
   text-align: center;
+}
+
+/* EXPERIENCE SECTION */
+
+.experience {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  background-color: black;
+}
+
+.experience__title {
+  font-size: 170px;
+  text-shadow: -1px 3px 2px black;
+  margin: 0 10vw;
+  text-wrap: nowrap;
+  color: white;
+}
+
+.experience__card-container {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+}
+
+.experience__card-subcontainer {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.experience__card {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  border-radius: 7px;
+  background-color: white;
+  margin: 2vh 5vw;
+  width: 90%;
+  max-height: 60px;
+}
+
+.experience__card-divider1 {
+  border-left: 3px solid black;
+  height: 40px;
+  margin: 10px 2px;
+}
+
+.experience__card-divider2 {
+  border-left: 2px solid black;
+  height: 40px;
+  margin: 10px 2px;
+}
+
+.experience__card-divider3 {
+  border-left: 1px solid black;
+  height: 40px;
+  margin: 10px 2px;
+}
+
+.experience__card-time {
+  margin: 0px 2vw;
+  font-size: 25px;
+  width: 20vw;
+  min-width: 230px;
+}
+
+.experience__card-organization-container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0px 2vw;
+  width: 20vw;
+  min-width: 200px;
+}
+
+.experience__card-organization-logo-overflow-container {
+  overflow: hidden;
+  max-width: 185px;
+  max-height: 60px;
+  align-content: center;
+  margin: auto;
+}
+
+.experience__card-organization-logo {
+  width: 208px;
+  height: 208px;
+  overflow: hidden;
+  margin: auto;
+  opacity: .1;
+}
+
+.experience__card-organization {
+  margin: 0px 1vw;
+  font-size: 20px;
+  z-index: 1;
+  position: absolute;
+}
+
+.experience__card-position {
+  margin: 0px 2vw;
+  font-size: 16px;
+  width: 20vw;
+  min-width: 230px;
+}
+
+.experience__card-location {
+  margin: 0px 2vw;
+  font-size: 16px;
+  min-width: 130px;
+}
+
+.experience__expand-container {
+  height: 0px;
+  background-color: beige;
+}
+
+.experience__expand-arrow {
+  width: 25px;
+  height: 25px;
+  color: white;
+  border-radius: 50%;
+  transition: all 0.5s ease-out;
+}
+
+.experience__expand-arrow:hover {
+  color: black;
+  background-color:white;
 }
 
 
