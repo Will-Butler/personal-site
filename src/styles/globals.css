@@ -145,7 +145,7 @@ li.slide {
   min-width: 100px;
   height: auto;
   margin: 0 4vh;
-  transition: all 0.5s ease-out;
+  transition: all 0.5s ease-in;
 }
 
 .about__icon:hover {
@@ -211,6 +211,12 @@ li.slide {
   margin: 2vh 5vw;
   width: 90%;
   max-height: 60px;
+  transition: border-radius .5s ease-out 2.0s;
+}
+
+.experience__card-expand {
+  border-radius: 7px 7px 0px 0px;
+  transition: border-radius .1s ease-out 0s;
 }
 
 .experience__card-divider1 {
@@ -285,8 +291,18 @@ li.slide {
 }
 
 .experience__expand-container {
-  height: 0px;
-  background-color: beige;
+  max-height: 0px;
+  background-color: white;
+  overflow: hidden;
+  width: 90%;
+  margin-top: -2vh;
+  transition: all 2s ease-in-out 0s;
+  border-radius: 0 0 7px 7px;
+}
+
+.experience__expand-container-open {
+  max-height: 400px;
+  transition: all 2s ease-in-out .25s;
 }
 
 .experience__expand-arrow {
@@ -294,12 +310,16 @@ li.slide {
   height: 25px;
   color: white;
   border-radius: 50%;
-  transition: all 0.5s ease-out;
+  transition: all 1s ease-in-out 0s;
 }
 
 .experience__expand-arrow:hover {
   color: black;
   background-color:white;
+}
+
+.experience__expand-arrow-flip {
+  rotate: 180deg;
 }
 
 
