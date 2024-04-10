@@ -12,10 +12,16 @@ interface ExperienceCardProps {
     position: string;
     location: string;
     logo: string | StaticImport;
+    content: Array<string>;
 }
 
-const ExperienceCard: React.FC<ExperienceCardProps> = ({time, organization, position, location, logo}) => {
+const ExperienceCard: React.FC<ExperienceCardProps> = ({time, organization, position, location, logo, content}) => {
     const [moreInfo, setMoreInfo] = useState(false);
+
+    const contentList = content.map((item, index) => (
+        <li key={index} className={`${openSans.className}`}>{item}</li>
+    ));
+
     return(
         <div className="experience__card-subcontainer">
             <div className={clsx(
@@ -26,12 +32,16 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({time, organization, posi
                 <div className="experience__card-divider1"></div>
                 <div className="experience__card-organization-container">
                     <div className="experience__card-organization-logo-overflow-container">
+                        {logo ? 
                         <Image
                         className="experience__card-organization-logo"
                         alt=""
                         src={logo}
                         quality={100}
                         />
+                        :
+                        ''
+                        }
                     </div>
                     <div className={`experience__card-organization ${playfairDisplay.className}`}>{organization}</div>
                 </div>
@@ -40,15 +50,11 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({time, organization, posi
                 <div className="experience__card-divider3"/>
                 <div className={`experience__card-location ${playfairDisplay.className}`}>{location}</div>
             </div>
-            <div className={clsx('experience__expand-container',
-                    {
-                    'experience__expand-container-open': moreInfo,
-                    'experience__expand-container-close': !moreInfo
-                    },
-                    )}>
-                <div>a</div>
-                <div>a</div>
-                <div>a</div>
+            <div className={clsx(
+                'experience__expand-container',
+                {'experience__expand-container-open': moreInfo},
+            )}>
+                <ul style={{ listStyleType: 'circle' }}>{contentList}</ul>
             </div>
             <button onClick={() => setMoreInfo(!moreInfo)}>
                 <AiOutlineDown className={clsx(

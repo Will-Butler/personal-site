@@ -19,7 +19,7 @@ const About = () => {
                 quality={100}
                 />
                 <div className='about__title-media-container'>
-                    <div className={`about__title ${montserrat.className} text-nowrap`}>About Me</div>
+                    <div className={`about__title ${montserrat.className}`}>About</div>
                     <div className='about__media-icons-container'>
                         <a href="https://github.com/Will-Butler" target="_blank">
                             <AiFillGithub
