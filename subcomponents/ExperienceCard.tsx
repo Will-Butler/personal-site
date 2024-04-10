@@ -12,7 +12,7 @@ interface ExperienceCardProps {
     position: string;
     location: string;
     logo: string | StaticImport;
-    content: Array<string>;
+    content: Array<string|React.JSX.Element>;
 }
 
 const ExperienceCard: React.FC<ExperienceCardProps> = ({time, organization, position, location, logo, content}) => {
