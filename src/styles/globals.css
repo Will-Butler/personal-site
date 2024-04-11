@@ -101,6 +101,7 @@ li.slide {
   position: relative;
   min-height: 100vh;
 }
+
 .about__header-container {
   display: flex;
   flex-flow: row nowrap;
@@ -109,6 +110,7 @@ li.slide {
   position: relative;
   width: 100%;
 }
+
 .about__headshot {
   border-radius: 100px;
   max-width: 30vw;
@@ -148,7 +150,6 @@ li.slide {
   transition: background-color 0.5s ease-in;
   transition: color 0.5s ease-in;
   transition: rotate 0.5s linear;
-
 }
 
 .about__icon:hover {
@@ -175,6 +176,7 @@ li.slide {
 /* EXPERIENCE SECTION */
 
 .experience {
+  --card-width: 90vw;
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-start;
@@ -213,7 +215,7 @@ li.slide {
   border-radius: 7px;
   background-color: white;
   margin: 2vh 5vw;
-  width: 80vw;
+  width: var(--card-width);
   max-height: 60px;
   transition: border-radius .5s ease-out 2.0s;
 }
@@ -297,7 +299,7 @@ li.slide {
 .experience__expand-container {
   background-color: white;
   overflow: hidden;
-  width: 80vw;
+  width: var(--card-width);
   margin-top: -2vh;
   transition: all 1s ease-in-out 0s;
   border-radius: 0 0 7px 7px;
@@ -326,6 +328,10 @@ li.slide {
 
 .experience__expand-arrow-flip {
   rotate: 180deg;
+}
+
+.experience__uva-xp-link {
+  text-decoration: underline;
 }
 
 .experience__resume-link {
@@ -364,16 +370,42 @@ li.slide {
   /* overflow: hidden; */
 }
 
-.slick-prev:before, .slick-next:before { 
-  color:black !important;
-  position: absolute;
-  top: 1500%;
+.uvaexperience__carousel-arrow-wrapper {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  margin: auto;
 }
-.slick-prev:before{
-  left: 2000%;
+
+.uvaexperience__carousel-arrow {
+  color: rgb(239, 239, 239);
+  opacity: .5;
+  transition: all 1s ease 0s;
+  font-size: 300px;
 }
-.slick-next:before {
-  right: 2000%;
+
+.uvaexperience__carousel-arrow:hover {
+  color: rgb(175, 175, 175);
+}
+
+.uvaexperience__gradient {
+  /* background: linear-gradient(160deg, #ff9000 25%, #ffffff 44%, #0c00ff 58%, #ffffff 84%, #ff9000 100%); */
+  background: linear-gradient(120deg, #ff9000, #ffffff, #10098e9d, #ffffff, #ff9000);
+  background-size: 300% 300%;
+  animation: gradient 25s ease-in-out infinite;
+}
+@keyframes gradient {
+  0%{background-position: 0% 0%}
+  /* 8.33%{background-position: 30% 0%}
+  25%{background-position: 40% 0%}
+  41.66%{background-position: 50% 0%}
+  58.33%{background-position: 60% 0%}
+  75%{background-position: 70% 0%}
+  91.66%{background-position: 80% 0%} */
+  50%{background-position: 100% 100%}
+  100%{background-position: 0% 0%}
 }
 
 
@@ -393,6 +425,7 @@ li.slide {
   border-width: 1px;
   margin-right: 40px;
   position: relative;
+  box-shadow: -.5px 0px 1px black;
 }
 
 .uvaexperience__card-pic {
@@ -404,19 +437,48 @@ li.slide {
 
 .uvaexperience__card-blurb {
   font-size: 18px;
-  margin: 5px;
+  margin: 5px 10px 10px 10px;
+  text-align: center;
 }
 
-/* color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb)); */
+/* CONTACT SECTION */
 
-/* @layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-} */
+.contact {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  min-height: 100vh;
+}
+
+.contact__title {
+  font-size: 200px;
+}
+
+.contact__media-icons-container {
+  display: grid;
+  gap: 10vh 0;
+  grid-template-columns: auto auto;
+  width: 100%;
+  /* margin: auto; */
+}
+
+.contact__icon {
+  width: 20vw;
+  min-width: 200px;
+  max-width: 300px;
+  height: auto;
+  margin: 0 auto;
+  transition: background-color 0.5s ease-in;
+  transition: color 0.5s ease-in;
+  transition: rotate 0.5s ease;
+}
+
+.contact__icon:hover {
+  background-color: black;
+  color: white;
+  /* width: 6vw; */
+  rotate: 360deg;
+}
+

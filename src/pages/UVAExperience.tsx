@@ -5,16 +5,28 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { AiFillLeftSquare, AiFillRightSquare } from "react-icons/ai";
+import UVAExperienceContent from "@/text/UVAExperienceContent";
+import HoonsSolo from "../../public/HoonsSolo.jpeg";
+import VisasSolo from "../../public/VisasSolo.jpeg";
+import MahjongSolo from "../../public/MahjongSolo.jpeg";
+import P4PSolo from "../../public/P4PSolo.jpeg";
+import Beer5KSolo from "../../public/Beer5kGroupSitting.jpeg";
+import Beer5KSolo1 from "../../public/Beer5kMicStanding.jpeg";
+import RugbySolo from "../../public/RugbyStandingWide.jpeg";
+import RugbySolo1 from "../../public/RugybWide.png";
+import RanchSolo from "../../public/RanchChickens.png";
+import RanchSolo1 from "../../public/RanchPigs.png";
+
 
 
 const UVAExperience: React.FC = () => {
     let sliderRef = useRef<Slider | null>(null);
-  const next = () => {
-    sliderRef.slickNext();
-  };
-  const previous = () => {
-    sliderRef.slickPrev();
-  };
+    const next = () => {
+        sliderRef.slickNext();
+    };
+    const previous = () => {
+        sliderRef.slickPrev();
+    };
 
     var settings = {
         className: 'uvaexperience__carousel',
@@ -56,34 +68,51 @@ const UVAExperience: React.FC = () => {
       };
 
       return(
-        <div className="uvaexperience">
+        <div className="uvaexperience uvaexperience__gradient">
             <div className="uvaexperience__carousel-container">
                 <Slider ref={slider => {sliderRef = slider;}} {...settings}>
                     <UVAExperienceCard
-                    index={1}
-                    blurb="This is blurb"
+                    blurb={UVAExperienceContent["HOONS_BLURB"]}
                     paragraph="this is paragraph"
-                    pic={tundy}
+                    pic={HoonsSolo}
                     />
                     <UVAExperienceCard
-                    index={2}
-                    blurb="This is blurb"
+                    blurb={UVAExperienceContent["RUGBY_BLURB"]}
                     paragraph="this is paragraph"
-                    pic={tundy}
+                    pic={RugbySolo}
                     />
                     <UVAExperienceCard
-                    index={3}
-                    blurb="This is blurb"
+                    blurb={UVAExperienceContent["RANCH_BLURB"]}
                     paragraph="this is paragraph"
-                    pic={tundy}
+                    pic={RanchSolo}
+                    />
+                    <UVAExperienceCard
+                    blurb={UVAExperienceContent["P4P_BLURB"]}
+                    paragraph="this is paragraph"
+                    pic={P4PSolo}
+                    />
+                    <UVAExperienceCard
+                    blurb={UVAExperienceContent["BEER5K_BLURB"]}
+                    paragraph="this is paragraph"
+                    pic={Beer5KSolo}
+                    />
+                    <UVAExperienceCard
+                    blurb={UVAExperienceContent["VISAS_BLURB"]}
+                    paragraph="this is paragraph"
+                    pic={VisasSolo}
+                    />
+                    <UVAExperienceCard
+                    blurb={UVAExperienceContent["MAHJONG_BLURB"]}
+                    paragraph="this is paragraph"
+                    pic={MahjongSolo}
                     />
                 </Slider>
-                <div style={{ textAlign: "center" }}>
+                <div className="uvaexperience__carousel-arrow-wrapper">
                     <button className="button" onClick={previous}>
-                    <AiFillLeftSquare style={{fontSize: '100px'}}/>
+                    <AiFillLeftSquare className="uvaexperience__carousel-arrow"/>
                     </button>
                     <button className="button" onClick={next}>
-                    <AiFillRightSquare style={{fontSize: '100px'}}/>
+                    <AiFillRightSquare className="uvaexperience__carousel-arrow"/>
                     </button>
                 </div>
             </div>

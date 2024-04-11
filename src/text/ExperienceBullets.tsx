@@ -15,5 +15,5 @@ export  const experienceBullets = {
     "TA_BULLET1": "Instruct, guide, and provide feedback to university students studying the foundations of Python and computer science.",
     "TA_BULLET2": "Deliver group lessons and individual academic support to over 100 students.",
     "UVA_BULLET1": "Major: Computer Science, Minor: Chinese, GPA: 3.9, Bachelor of Arts with Distinction.",
-    "UVA_BULLET2": <>Click <Link href="/UVAExperience">here</Link> to learn more about my time at UVA!</>,
+    "UVA_BULLET2": <>Click <Link className="experience__uva-xp-link" href="/UVAExperience">here</Link> to learn more about my time at UVA!</>,
 }

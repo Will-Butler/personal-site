@@ -8,10 +8,9 @@ interface UVAExperienceCardProps {
     blurb: string;
     paragraph: string;
     pic: string | StaticImport;
-    index: number;
 }
 
-const UVAExperienceCard: React.FC<UVAExperienceCardProps> = ({blurb, paragraph, pic, index}) => {
+const UVAExperienceCard: React.FC<UVAExperienceCardProps> = ({blurb, paragraph, pic}) => {
     return (
         <div className="uvaexperience__card">
             <Image
@@ -20,7 +19,7 @@ const UVAExperienceCard: React.FC<UVAExperienceCardProps> = ({blurb, paragraph, 
             alt="Image Not Found"
             quality={100}
             />
-            <div className={`${montserrat.className} uvaexperience__card-blurb`}>{blurb}{index}</div>
+            <div className={`${montserrat.className} uvaexperience__card-blurb`}>{blurb}</div>
             {/* <div>{paragraph}</div> */}
         </div>
     )
