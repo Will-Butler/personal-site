@@ -18,31 +18,7 @@ const About = () => {
                 placeholder="blur"
                 quality={100}
                 />
-                <div className='about__title-media-container'>
-                    <div className={`about__title ${montserrat.className}`}>About</div>
-                    <div className='about__media-icons-container'>
-                        <a href="https://github.com/Will-Butler" target="_blank">
-                            <AiFillGithub
-                            className='about__icon'
-                            />
-                        </a>
-                        <a href="https://www.instagram.com/gunthbutler/" target="_blank">
-                            <AiFillInstagram
-                            className='about__icon'
-                            />
-                        </a>
-                        <a href="https://www.linkedin.com/in/will-butler-782242197/" target="_blank">
-                            <AiFillLinkedin
-                            className='about__icon'
-                            />
-                        </a>
-                        <a href="mailto:will.butler24@gmail.com?Subject=Personal Website Inquiry">
-                            <AiFillMail
-                            className='about__icon'
-                            />
-                        </a>
-                    </div>
-                </div>
+                <div className={`about__title ${montserrat.className}`}>About</div>
             </div>
             <div className='about__content-container'>
                 <div className={`about__content-section ${playfairDisplay.className}`}>{aboutSections["SECTION1"]}</div>

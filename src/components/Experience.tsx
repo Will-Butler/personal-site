@@ -15,7 +15,7 @@ const Experience = () => {
                 <ExperienceCard
                     time="Jul 2023 - Current"
                     organization="Gap Year"
-                    position="Explorer"
+                    position="Surf Instructor/Developer/Musician"
                     location="Taiwan"
                     logo=""
                     content={[

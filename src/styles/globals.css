@@ -20,10 +20,37 @@
 body {
   background: white;
   min-height: 100vh;
+  scroll-behavior: smooth;
 }
 
 .page-wrapper {
   min-height: 100%;
+}
+
+.floating-nav-container{
+  position: fixed;
+  right: 1%;
+  top: 5%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+
+}
+
+.floating-nav-button {
+  position: relative;
+  margin: 1vh;
+  opacity: .6;
+  color: gray;
+  font-size: 50px;
+  transition: all 1s ease 0;
+}
+
+.floating-nav-button:hover {
+  opacity: .9;
+  cursor: pointer;
 }
 
 ul.slides {
@@ -54,6 +81,7 @@ li.slide {
 .home-last-name {
   margin-top: 45vh;
   margin-left: 50vh;
+  margin-bottom: var(--title-line-height);
   position: absolute;
   color: white;
   font-size: 420px;
@@ -109,14 +137,22 @@ li.slide {
   align-items: center;
   position: relative;
   width: 100%;
+  margin: 3vh 3vw 1vh 3vw;
+
 }
 
 .about__headshot {
   border-radius: 100px;
-  max-width: 30vw;
+  max-width: 22vw;
   max-height: 100%;
   position: relative;
-  margin: 10vh 0 10vh 3vw;
+  margin-right: 3vw;
+}
+
+.about__title {
+  margin-bottom: var(--title-line-height);
+  margin-top: var(--title-line-height);
+  font-size: 20vw;
 }
 
 .about__title-media-container {
@@ -128,11 +164,6 @@ li.slide {
   margin: 0 10vw 0 4vw;
 }
 
-.about__title {
-  font-size: 200px;
-  margin-bottom: var(--title-line-height);
-}
-
 .about__media-icons-container {
   display: flex;
   flex-flow: row nowrap;
@@ -142,19 +173,22 @@ li.slide {
 }
 
 .about__icon {
-  width: 10vw;
-  min-width: 100px;
-  max-width: 125px;
+  width: 5vw;
+  min-width: 60px;
+  max-width: 100px;
   height: auto;
   margin: 0 3vh;
+  background-color: black;
+  color: white;
+  border-radius: 20px;
   transition: background-color 0.5s ease-in;
   transition: color 0.5s ease-in;
   transition: rotate 0.5s linear;
 }
 
 .about__icon:hover {
-  background-color: black;
-  color: white;
+  background-color: white;
+  color: black;
   /* width: 6vw; */
   rotate: 360deg;
 }
@@ -308,7 +342,7 @@ li.slide {
 
 .experience__expand-container-open {
   max-height: 400px;
-  transition: all 2s ease-in-out 0s;
+  transition: all 1s ease-in-out 0s;
   padding: 0px 20px 20px 30px;
   list-style-type: circle;
 }
@@ -450,26 +484,34 @@ li.slide {
   align-items: center;
   position: relative;
   min-height: 100vh;
+  background-color: black;
+  overflow: scroll;
 }
 
 .contact__title {
-  font-size: 200px;
+  font-size: 18vw;
+  color: white;
+  margin: 2vh 2vw;
 }
 
 .contact__media-icons-container {
-  display: grid;
-  gap: 10vh 0;
-  grid-template-columns: auto auto;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
   width: 100%;
-  /* margin: auto; */
+  margin: 2vh 2vw;
 }
 
 .contact__icon {
   width: 20vw;
-  min-width: 200px;
-  max-width: 300px;
+  /* min-width: 180px;
+  max-width: 300px; */
   height: auto;
-  margin: 0 auto;
+  color: black;
+  background-color: white;
+  border-radius: 20px;
+  margin: 0 2vw;
   transition: background-color 0.5s ease-in;
   transition: color 0.5s ease-in;
   transition: rotate 0.5s ease;

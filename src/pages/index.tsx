@@ -1,41 +1,111 @@
 import Image from "next/image";
 import { Inter } from "next/font/google";
-import React from 'react';
-import {BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import Home from "@/components/Home";
 import About from "@/components/About";
 import Experience from "@/components/Experience";
 import Contact from "@/components/Contact";
+import Projects from "@/components/Projects";
+import { AiFillDownSquare, AiFillUpSquare } from "react-icons/ai";
+// import { IntersectionObserver } from 
 
 //<Link to="/">Home</Link>
-
 const inter = Inter({ subsets: ["latin"] });
 
 export default function App() {
+  // const navigate = useNavigate();
+  const [section, setSection] = useState(0);
+  const home = document.querySelector('#home')
+  const about = document.querySelector('#about')
+  const experience = document.querySelector('#experience')
+  const projects = document.querySelector('#projects')
+  const contact = document.querySelector('#contact')
+  const sections = [home, about, experience, projects, contact];
+
+  const sectionIndexes: {
+    home: number;
+    about: number;
+    experience: number;
+    projects: number;
+    contact: number;
+  } = {
+    'home': 0,
+    'about': 1,
+    'experience': 2,
+    'projects': 3,
+    'contact': 4
+  }
+  const handleNextSectionNav = () => {
+    console.log("b4", section);
+    let nextSection = section == 4 ? 0 : (section % 4) + 1;
+    console.log("a4", nextSection);
+    setSection(nextSection);
+    sections[nextSection].scrollIntoView({behavior: 'smooth'});
+  }
+  const handlePrevSectionNav = () => {
+    console.log("b4", section);
+    let prevSection = section == 0 ? 4 : section - 1;
+    console.log("a4", prevSection);
+    setSection(prevSection);
+    sections[prevSection].scrollIntoView({behavior: 'smooth'});
+  }
+
+  let observerOptions = {
+    rootMargin: "0px",
+    threshold: .5
+  };
+
+  const observerCallback =((entries, observer) => {
+    entries.forEach((entry: IntersectionObserverEntry) => {
+      if (entry.isIntersecting && entry.intersectionRatio >=.5){
+        setSection(sectionIndexes[entry.target.id])
+      }
+    });
+  })
+
+  let observer = new IntersectionObserver(observerCallback, observerOptions);
+
+  useEffect(() => {
+    if(home != null){
+      observer.observe(home);
+      observer.observe(about);
+      observer.observe(experience);
+      observer.observe(projects);
+      observer.observe(contact);
+    }
+  }, [home, about, experience, projects, contact])  
+
   return (
     <Router>
       <div className="page-wrapper">
-        <ul className="slides">
-          <li className="slide">
+        <div className="floating-nav-container">
+          <button onClick={()=>{handlePrevSectionNav()}}>
+            <AiFillUpSquare className="floating-nav-button"/>
+          </button>
+          <button onClick={()=>{handleNextSectionNav()}}>
+            <AiFillDownSquare className="floating-nav-button"/>
+          </button>
+        </div>
+        <ul id="slides" className="slides">
+          <li id="home" className="slide">
             <Home/>
           </li>
-          <li className="slide">
+          <li id="about" className="slide">
             <About/>
           </li>
-          <li className="slide">
+          <li id="experience" className="slide">
             <Experience/>
           </li>
-          <li className="slide">
+          <li id="projects" className="slide">
+            <Projects/>
+          </li>
+          <li id="contact" className="slide">
             <Contact/>
           </li>
         </ul>
       </div>
       <div className="no-show">
-        <Routes>
-          <Route path="/about" element={<h1>About</h1>} />
-          <Route path="/topics" element={<h1>Topics</h1>} />
-          <Route path="/" element={<Home/>} />
-        </Routes>
       </div>
     </Router>
   );
