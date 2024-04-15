@@ -7,6 +7,7 @@ import clsx from 'clsx';
 
 
 interface ExperienceCardProps {
+    id: string;
     time: string;
     organization: string;
     position: string;

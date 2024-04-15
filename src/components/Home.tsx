@@ -1,12 +1,33 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Image from "next/image";
 import homeImage from '../../public/IndiaMountainFullBody.jpg';
 import { openSans, montserrat, playfairDisplay } from '../styles/fonts';
+import gsap from 'gsap';
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 const Home = () => {
+
+    ///////Scroll Animations///////
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.defaults({ease: "none", duration: 2});
+    useEffect(() => {
+        let ctx = gsap.context(() => {
+            ScrollTrigger.create({
+                trigger: "#background",
+                    start: "top top",
+                    end: "+=300px",
+                    scrub: true,
+                    // markers: true,
+                    pin: true,
+                    pinSpacing: false
+            })
+        });
+        return () => ctx.revert();
+    }, [])
     return(
-        <div className="home">
+        <div id="home" className="home">
             <Image
+                id="background"
                 className="bg-img"
                 alt="Home Cover Image"
                 src={homeImage}

@@ -37,18 +37,14 @@ export default function App() {
     'contact': 4
   }
   const handleNextSectionNav = () => {
-    console.log("b4", section);
     let nextSection = section == 4 ? 0 : (section % 4) + 1;
-    console.log("a4", nextSection);
     setSection(nextSection);
-    sections[nextSection].scrollIntoView({behavior: 'smooth'});
+    sections[nextSection].scrollIntoView({block: "start", inline: "nearest", behavior: 'smooth'});
   }
   const handlePrevSectionNav = () => {
-    console.log("b4", section);
     let prevSection = section == 0 ? 4 : section - 1;
-    console.log("a4", prevSection);
     setSection(prevSection);
-    sections[prevSection].scrollIntoView({behavior: 'smooth'});
+    sections[prevSection].scrollIntoView({block: "start", inline: "nearest", behavior: 'smooth'});
   }
 
   let observerOptions = {

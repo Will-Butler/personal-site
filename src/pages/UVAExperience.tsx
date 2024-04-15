@@ -1,10 +1,11 @@
 import React, { useRef } from "react";
+import Link from "next/link";
 import UVAExperienceCard from "../../subcomponents/UVAExperienceCard";
 import tundy from "../../public/tundyheadshot3.png"
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { AiFillLeftSquare, AiFillRightSquare } from "react-icons/ai";
+import { AiFillLeftSquare, AiFillRightSquare, AiOutlineRollback } from "react-icons/ai";
 import UVAExperienceContent from "@/text/UVAExperienceContent";
 import HoonsSolo from "../../public/HoonsSolo.jpeg";
 import VisasSolo from "../../public/VisasSolo.jpeg";
@@ -16,8 +17,6 @@ import RugbySolo from "../../public/RugbyStandingWide.jpeg";
 import RugbySolo1 from "../../public/RugybWide.png";
 import RanchSolo from "../../public/RanchChickens.png";
 import RanchSolo1 from "../../public/RanchPigs.png";
-
-
 
 const UVAExperience: React.FC = () => {
     let sliderRef = useRef<Slider | null>(null);
@@ -69,6 +68,11 @@ const UVAExperience: React.FC = () => {
 
       return(
         <div className="uvaexperience uvaexperience__gradient">
+            <div className="uvaexperience__return-container ">
+              <Link className="uvaexperience__return-icon" href="/">
+                <AiOutlineRollback className="uvaexperience__return-icon"/>
+              </Link>
+            </div>
             <div className="uvaexperience__carousel-container">
                 <Slider ref={slider => {sliderRef = slider;}} {...settings}>
                     <UVAExperienceCard
