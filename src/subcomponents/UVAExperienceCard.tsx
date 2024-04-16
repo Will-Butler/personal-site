@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { openSans, montserrat, playfairDisplay } from '../src/styles/fonts';
+import { openSans, montserrat, playfairDisplay } from '../styles/fonts';
 import Image from "next/image";
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import clsx from 'clsx';

@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import Link from "next/link";
-import UVAExperienceCard from "../../subcomponents/UVAExperienceCard";
+import UVAExperienceCard from "../subcomponents/UVAExperienceCard";
 import tundy from "../../public/tundyheadshot3.png"
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";

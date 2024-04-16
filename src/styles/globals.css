@@ -379,6 +379,10 @@ li.slide {
   font-size: 30px;
   margin: 2vh auto;
   transition: all 1s ease 0s;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
 }
 
 .experience__resume-link:hover {
@@ -493,29 +497,126 @@ li.slide {
 
 /* PROJECTS SECTION */
 
+.projects__center-grid {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+}
+
 .projects__container {
   display: grid;
   padding: 10px;
+  grid-template-columns: repeat(3, minmax(200px, 250px));
+  gap: 10px;
+  grid-template-rows: repeat(6, minmax(75px, auto));
+  padding: 20px;
+  align-content: center;
+  margin: auto;
+}
+
+.projects__card {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  grid-row: span 1;
+  grid-column: span 1;
+  border-radius: 10px;
+  border-width: 2px;
+  background-color: white; 
+  /* padding: 10px; */
+}
+
+.projects__card-header-container {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+  /* margin: 10px 0; */
+  background: linear-gradient(180deg, rgb(237, 237, 237), white);
+  width: 100%;
+}
+
+.projects__card-header-title {
+  font-size: 16px;
 }
 
 .projects__unifounders-card {
-
+  grid-row: span 4;
+  grid-column: span 2;
+  order: 0;
+  flex-flow: column nowrap;
+  /* align-items: center; */
+  justify-content: flex-start;
 }
 
-.projects__tech-arsenal-card {
+.unifounderscard__header-container {
+  display: flex;
+  flex-flow: row nowrap;
+  padding: 0px 10px;
+  margin-top: -10px;
+}
 
+.unifounderscard__title {
+  color: #04555E;
+  font-size: 80px;
+  font-weight: 550;
+  margin: 0px 15px -10px 15px;
+  /* margin-bottom: var(--title-line-height); */
+  /* text-align: center; */
+}
+
+.unifounderscard__icon {
+  object-fit: contain;
+  width: 70px;
+}
+
+.unifounderscard__image-container {
+  position: relative;
+  /* width: 100%; */
+  height: auto;
+}
+
+.unifounderscard__image {
+  object-fit: cover;
+  border-radius: 0 0 20px 20px;
+}
+
+
+.projects__tech-arsenal-card {
+  grid-row: span 1;
+  order: 1;
 }
 
 .projects__soft-skills-card {
-
-}
-
-.projects__uva-card {
-
+  grid-row: span 1;
+  order: 3;
 }
 
 .projects__principles-card {
+  grid-row: span 2;
+  order: 2;
+}
 
+.projects__uva-card {
+  grid-column: span 2;
+  grid-row: span 2;
+  order: 5;
+}
+
+.projects__articles-card {
+  grid-row: span 2;
+  order: 4;
+}
+
+@media screen and (max-width: 660px) {
+  .projects__container{
+    grid-template-columns: repeat(2, minmax(200px, auto));
+    grid-template-rows: repeat(9, minmax(75px, auto));
+  }
+  .projects__articles-card {
+    order: 2;
+  }
 }
 
 /* CONTACT SECTION */

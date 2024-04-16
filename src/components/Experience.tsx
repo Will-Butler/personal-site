@@ -1,18 +1,20 @@
 import React, { useEffect } from 'react';
 import { openSans, montserrat, playfairDisplay } from '../styles/fonts';
-import ExperienceCard from '../../subcomponents/ExperienceCard';
+import ExperienceCard from '../subcomponents/ExperienceCard';
 import NasaLogo from '../../public/NasaLogo.png';
 import AmazonLogo from '../../public/AmazonLogo.png';
 import UVALogo from '../../public/UVALogo.png';
 import { experienceBullets } from '../text/ExperienceBullets'
 import gsap from 'gsap';
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import { TfiNewWindow } from "react-icons/tfi";
+
 
 const Experience = () => {
 
     ///////Scroll Animations///////
     gsap.registerPlugin(ScrollTrigger);
-    gsap.defaults({ ease: "none", duration: 2});
+    gsap.defaults({ ease: "none", duration: .5});
     useEffect(() => {
         let ctx = gsap.context(() => {
             var cards = gsap.utils.toArray('.experience__card-subcontainer');
@@ -102,7 +104,9 @@ const Experience = () => {
                         experienceBullets["UVA_BULLET2"]
                     ]}
                 />
-                <a className={`experience__resume-link ${montserrat.className}`} href='/Resume.pdf'>Download My Resume</a>
+                <a className={`experience__resume-link ${montserrat.className}`} href='/Resume.pdf'>
+                <span><TfiNewWindow/></span><span>Resume</span>
+                </a> 
             </div>
         </div>
     )
