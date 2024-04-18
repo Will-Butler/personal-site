@@ -2,7 +2,7 @@ import React from "react";
 import Link from 'next/link';
 
 //TODO: link certain bullets to work that was completed (ie. UniFounders, Music, articles)
-export  const experienceBullets = {
+export const experienceBullets = {
     "GAP_YEAR_BULLET1": "Teach part time as a surf instructor: coordinate lessons and help hundreds of aspiring surfers learn basic technique, in both English and Chinese.",
     "GAP_YEAR_BULLET2": "Individually design, develop, and maintain a website to connect university alumni with students working on startups and personal projects. Garnered over 200 signups!",
     "GAP_YEAR_BULLET3": "Dedicate time to various personal projects including this website, mandarin studies, and music production.",

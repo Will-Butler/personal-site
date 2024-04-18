@@ -27,7 +27,7 @@ const Experience = () => {
                         trigger: "#experience",
                         // markers: true,
                         start: "top center",
-                        end: "bottom center",
+                        end: "bottom top",
                         toggleActions: "play reverse restart reverse", 
                     }
                 })

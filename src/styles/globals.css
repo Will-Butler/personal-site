@@ -72,20 +72,27 @@ li.slide {
 
 .home-first-name {
   margin-top: var(--title-line-height);
+  margin-bottom: var(--title-line-height);
   position: absolute;
-  margin-left: 2vh;
-  font-size: 370px;
-  text-shadow: -1px 3px 2px black;
+  font-size: 55vw;
+  color: transparent;
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: black;
+  bottom: 5%;
+  left: 5%;
+  z-index: 1;
 }
 
 .home-last-name {
-  margin-top: 45vh;
-  margin-left: 50vh;
   margin-bottom: var(--title-line-height);
   position: absolute;
-  color: white;
-  font-size: 420px;
-  text-shadow: -1px 3px 2px black;
+  color: transparent;
+  font-size: 35vw;
+  bottom: 1%;
+  left: 5%;
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: white;
+  stroke-width: 3px;
 }
 
 .bg-img{
@@ -97,21 +104,24 @@ li.slide {
 }
 
 .home-attribute-container {
-  display: grid;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
   position: absolute;
-  margin-left: 10vh;
-  margin-top: 47vh;
+  margin-top: 1vh;
+  width: 100vw;
 }
 
 .home-attribute-title {
   font-size: 25px;
   position: relative;
+
 }
 
 .home-current-status {
   font-size: 20px;
   position: relative;
-  color: white;
+  color: black;
 }
 
 .no-show {
@@ -223,7 +233,7 @@ li.slide {
   align-items: center;
   overflow: hidden;
   position: relative;
-  background-color: black;
+  background: linear-gradient(120deg, darkblue, rgb(58, 0, 58), black 25%, black);
   min-height: 100vh;
 }
 
@@ -518,12 +528,13 @@ li.slide {
 .projects__card {
   display: flex;
   align-items: flex-start;
-  justify-content: center;
+  /* justify-content: center; */
   grid-row: span 1;
   grid-column: span 1;
   border-radius: 10px;
   border-width: 2px;
   background-color: white; 
+  box-shadow: -2px 2px 6px black;
   /* padding: 10px; */
 }
 
@@ -540,6 +551,8 @@ li.slide {
 .projects__card-header-title {
   font-size: 16px;
 }
+
+/* UNIFOUNDERS CARD SECTION */
 
 .projects__unifounders-card {
   grid-row: span 4;
@@ -582,10 +595,13 @@ li.slide {
   border-radius: 0 0 20px 20px;
 }
 
+/* TECHARSENAL CARD SECTION */
 
 .projects__tech-arsenal-card {
   grid-row: span 1;
   order: 1;
+  flex-flow: column nowrap;
+  /* background: linear-gradient(120deg, teal, white); */
 }
 
 .projects__soft-skills-card {
@@ -608,6 +624,105 @@ li.slide {
   grid-row: span 2;
   order: 4;
 }
+.multi-carousel-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.carousel-wrapper {
+  --time: 20s;
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #fff 20%, #fff 80%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #fff 20%, #fff 80%, transparent);
+}
+
+.carousel-forward {
+  white-space: nowrap;
+  animation: carousel-animation-forward var(--time) linear infinite;
+  animation-delay: calc(var(--time) * -1);
+}
+
+.carousel-forward:nth-child(2) {
+  animation: carousel-animation-forward2 var(--time) linear infinite;
+  animation-delay: calc(var(--time) / -2);
+}
+
+.carousel-backward {
+  white-space: nowrap;
+  animation: carousel-animation-backward var(--time) linear infinite;
+  animation-delay: calc(var(--time) * -1);
+}
+
+.carousel-backward:nth-child(2) {
+  animation: carousel-animation-backward2 var(--time) linear infinite;
+  animation-delay: calc(var(--time) / -2);
+}
+
+@keyframes carousel-animation-forward {
+  0%
+  {
+    transform: translateX(100%)
+  }
+  100%
+  {
+    transform: translateX(-100%)
+  }
+}
+@keyframes carousel-animation-forward2 {
+  0%
+  {
+    transform: translateX(0%)
+  }
+  100%
+  {
+    transform: translateX(-200%)
+  }
+}
+@keyframes carousel-animation-backward {
+  0%
+  {
+    transform: translateX(-100%)
+  }
+  100%
+  {
+    transform: translateX(100%)
+  }
+}
+
+@keyframes carousel-animation-backward2 {
+  0%
+  {
+    transform: translateX(-200%)
+  }
+  100%
+  {
+    transform: translateX(0%)
+  }
+}
+
+.carousel-card {
+  display: inline-flex;
+  margin: 5px;
+  background: black;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: 1s;
+  letter-spacing: .2em;
+}
+
+.carousel-card:hover {
+  background: rgb(1, 1, 116);
+  cursor: pointer;
+}
 
 @media screen and (max-width: 660px) {
   .projects__container{
@@ -628,7 +743,7 @@ li.slide {
   align-items: center;
   position: relative;
   min-height: 100vh;
-  background-color: black;
+  background: linear-gradient(250deg, darkblue, rgb(58, 0, 58), black 25%, black 85%, rgb(58, 0, 58), darkblue);
   overflow: scroll;
 }
 

@@ -18,7 +18,7 @@ const About = () => {
             ScrollTrigger.create({
                 trigger: "#about",
                     start: "top top",
-                    end: "+=2000px",
+                    end: "+=1000px",
                     // scrub: true,
                     // markers: true,
                     pin: true,
@@ -26,8 +26,8 @@ const About = () => {
             const tl = gsap.timeline({
                 scrollTrigger: {
                     trigger: "#about",
-                    start: "top 80%",
-                    end: "+=2000px",
+                    start: "top 39%",
+                    end: "+=1000px",
                     scrub: true,
                     // markers: true,
                 }

@@ -43,7 +43,7 @@ const Home = () => {
                     <div className={`home-attribute-title ${montserrat.className}`}>Programmer.</div>
                     <div className={`home-attribute-title ${montserrat.className}`}>Designer.</div>
                     <div className={`home-attribute-title ${montserrat.className}`}>Musician.</div>
-                    <div className={`home-current-status ${playfairDisplay.className} text-sm text-white`}>...looking for a software developer position.</div>
+                    {/* <div className={`home-current-status ${playfairDisplay.className} text-sm text-white`}>...looking for a software developer position.</div> */}
                 </div>
 
         </div>
