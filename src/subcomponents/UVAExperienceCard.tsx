@@ -8,19 +8,20 @@ interface UVAExperienceCardProps {
     blurb: string;
     paragraph: string;
     pic: string | StaticImport;
+    picSize: string;
 }
 
-const UVAExperienceCard: React.FC<UVAExperienceCardProps> = ({blurb, paragraph, pic}) => {
+const UVAExperienceCard: React.FC<UVAExperienceCardProps> = ({blurb, paragraph, pic, picSize = '40vh'}) => {
     return (
         <div className="uvaexperience__card">
             <Image
             className="uvaexperience__card-pic"
+            style={{"--uva-experience-carousel-height": picSize} as React.CSSProperties}
             src={pic}
             alt="Image Not Found"
             quality={100}
             />
             <div className={`${montserrat.className} uvaexperience__card-blurb`}>{blurb}</div>
-            {/* <div>{paragraph}</div> */}
         </div>
     )
 }

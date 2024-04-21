@@ -4,7 +4,7 @@ import TechArsenalCard from "@/subcomponents/TechArsenalCard";
 import SoftSkillsCard from "@/subcomponents/SoftSkillsCard";
 import ArticlesCard from "@/subcomponents/ArticlesCard";
 import PrinciplesCard from "@/subcomponents/PrinciplesCard";
-import UVACard from "@/subcomponents/UVACard";
+import UniversityExperienceCard from "@/subcomponents/UniversityExperienceCard";
 const Projects = () => {
     return (
         <div className="projects__center-grid">
@@ -13,7 +13,7 @@ const Projects = () => {
                 <TechArsenalCard/>
                 <SoftSkillsCard/>
                 <PrinciplesCard/>
-                <UVACard/>
+                <UniversityExperienceCard/>
                 <ArticlesCard/>
             </div>
         </div>

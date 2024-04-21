@@ -15,24 +15,24 @@ const TechArsenalCard: React.FC = () => {
                 <div className="carousel-wrapper">
                     <div className="carousel-forward">
                         {TechArsenalArray1.map((item) => (
-                            <span className="carousel-card">{item}</span>
+                            <span key={item} className="carousel-card">{item}</span>
                         ))}
                     </div>
                     <div className="carousel-forward">
                         {TechArsenalArray1.map((item) => (
-                            <span className="carousel-card">{item}</span>
+                            <span key={`${item}2`} className="carousel-card">{item}</span>
                         ))}
                     </div>
                 </div>
                 <div className="carousel-wrapper">
                     <div className="carousel-backward">
                         {TechArsenalArray3.map((item) => (
-                            <span className="carousel-card">{item}</span>
+                            <span key={item} className="carousel-card">{item}</span>
                         ))}
                     </div>
                     <div className="carousel-backward">
                         {TechArsenalArray3.map((item) => (
-                            <span className="carousel-card">{item}</span>
+                            <span key={`${item}2`} className="carousel-card">{item}</span>
                         ))}
                     </div>
                 </div>

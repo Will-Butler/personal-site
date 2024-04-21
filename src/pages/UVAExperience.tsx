@@ -18,7 +18,10 @@ import RugbySolo1 from "../../public/RugybWide.png";
 import RanchSolo from "../../public/RanchChickens.png";
 import RanchSolo1 from "../../public/RanchPigs.png";
 
-const UVAExperience: React.FC = () => {
+interface UVAExperienceProps {
+  picSize: string;
+}
+const UVAExperience: React.FC<UVAExperienceProps> = ({picSize}) => {
     let sliderRef = useRef<Slider | null>(null);
     const next = () => {
         sliderRef.slickNext();
@@ -32,7 +35,7 @@ const UVAExperience: React.FC = () => {
         infinite: true,
         speed: 1000,
         slidesToShow: 3,
-        slidesToScroll: 1,
+        // slidesToScroll: 1,
         autoplay: true,
         centerMode: true,
         adaptiveHeight: true,
@@ -42,13 +45,13 @@ const UVAExperience: React.FC = () => {
             {
                 breakpoint: 1450,
                 settings: {
-                  slidesToShow: 4,
+                  slidesToShow: 2,
                 }
               },
             {
                 breakpoint: 1220,
                 settings: {
-                  slidesToShow: 3,
+                  slidesToShow: 2,
                 }
               },
               {
@@ -79,36 +82,43 @@ const UVAExperience: React.FC = () => {
                     blurb={UVAExperienceContent["HOONS_BLURB"]}
                     paragraph="this is paragraph"
                     pic={HoonsSolo}
+                    picSize={picSize}
                     />
                     <UVAExperienceCard
                     blurb={UVAExperienceContent["RUGBY_BLURB"]}
                     paragraph="this is paragraph"
                     pic={RugbySolo}
+                    picSize={picSize}
                     />
                     <UVAExperienceCard
                     blurb={UVAExperienceContent["RANCH_BLURB"]}
                     paragraph="this is paragraph"
                     pic={RanchSolo}
+                    picSize={picSize}
                     />
                     <UVAExperienceCard
                     blurb={UVAExperienceContent["P4P_BLURB"]}
                     paragraph="this is paragraph"
                     pic={P4PSolo}
+                    picSize={picSize}
                     />
                     <UVAExperienceCard
                     blurb={UVAExperienceContent["BEER5K_BLURB"]}
                     paragraph="this is paragraph"
                     pic={Beer5KSolo}
+                    picSize={picSize}
                     />
                     <UVAExperienceCard
                     blurb={UVAExperienceContent["VISAS_BLURB"]}
                     paragraph="this is paragraph"
                     pic={VisasSolo}
+                    picSize={picSize}
                     />
                     <UVAExperienceCard
                     blurb={UVAExperienceContent["MAHJONG_BLURB"]}
                     paragraph="this is paragraph"
                     pic={MahjongSolo}
+                    picSize={picSize}
                     />
                 </Slider>
                 <div className="uvaexperience__carousel-arrow-wrapper">

@@ -7,6 +7,7 @@
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
   --title-line-height: calc(-.6 * 0.5em);
+  --uva-experience-carousel-height: 40vh;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -36,7 +37,6 @@ body {
   justify-content: space-between;
   align-items: center;
   z-index: 1;
-
 }
 
 .floating-nav-button {
@@ -81,6 +81,11 @@ li.slide {
   bottom: 5%;
   left: 5%;
   z-index: 1;
+  animation: first-name-animation 2s ease;
+}
+@keyframes first-name-animation {
+  0%{color: black}
+  100%{color: transparent}
 }
 
 .home-last-name {
@@ -93,6 +98,12 @@ li.slide {
   -webkit-text-stroke-width: 3px;
   -webkit-text-stroke-color: white;
   stroke-width: 3px;
+  animation: last-name-animation 2s ease 1s;
+}
+
+@keyframes last-name-animation {
+  0%{color: white;}
+  100%{color: transparent;}
 }
 
 .bg-img{
@@ -403,6 +414,7 @@ li.slide {
 
 .uvaexperience {
   display: block;
+  position: relative;
   align-content: center;
   background-color: white;
   min-height: 100vh;
@@ -416,7 +428,7 @@ li.slide {
 }
 
 .uvaexperience__return-icon {
-  font-size: 10vw;
+  font-size: 20vw;
   color: rgb(239, 239, 239);
   opacity: .9;
   transition: all 1s ease 0s;
@@ -453,11 +465,11 @@ li.slide {
   color: rgb(239, 239, 239);
   opacity: .5;
   transition: all 1s ease 0s;
-  font-size: 300px;
+  font-size: 20vw;
 }
 
 .uvaexperience__carousel-arrow:hover {
-  color: rgb(175, 175, 175);
+  color: rgb(147, 147, 147);
 }
 
 .uvaexperience__gradient {
@@ -481,9 +493,11 @@ li.slide {
   justify-content: flex-start;
   align-items: center;
   background-color: white;
-  min-height: 450px;
+  min-height: 250px;
   max-height: 450px;
-  max-width: 300px;
+  height: auto;
+  min-width: 250px;
+  max-width: 350px;
   border-color:lightgray;
   border-radius: 30px;
   border-width: 1px;
@@ -494,13 +508,13 @@ li.slide {
 
 .uvaexperience__card-pic {
   object-fit: cover;
-  height: 40vh;
+  height: var(--uva-experience-carousel-height);
   width: 100%;
   border-radius: 30px 30px 0 0;
 }
 
 .uvaexperience__card-blurb {
-  font-size: 18px;
+  font-size: 1rem;
   margin: 5px 10px 10px 10px;
   text-align: center;
 }
@@ -512,17 +526,25 @@ li.slide {
   flex-flow: row nowrap;
   align-items: center;
   justify-content: center;
+  margin: 5vh 0;
+  /* height: 100vh; */
 }
 
 .projects__container {
   display: grid;
   padding: 10px;
-  grid-template-columns: repeat(3, minmax(200px, 250px));
+  grid-template-columns: repeat(3, minmax(250px, 300px));
   gap: 10px;
   grid-template-rows: repeat(6, minmax(75px, auto));
   padding: 20px;
   align-content: center;
   margin: auto;
+}
+@media screen and (max-width: 800px) {
+  .projects__container{
+    grid-template-columns: repeat(2, minmax(250px, 300px));
+    grid-template-rows: repeat(9, minmax(75px, auto));
+  }
 }
 
 .projects__card {
@@ -535,6 +557,7 @@ li.slide {
   border-width: 2px;
   background-color: white; 
   box-shadow: -2px 2px 6px black;
+  flex-flow: column nowrap;
   /* padding: 10px; */
 }
 
@@ -600,30 +623,90 @@ li.slide {
 .projects__tech-arsenal-card {
   grid-row: span 1;
   order: 1;
-  flex-flow: column nowrap;
   /* background: linear-gradient(120deg, teal, white); */
 }
+
+
+/* SOFT SKILLS CARD SECTION */
 
 .projects__soft-skills-card {
   grid-row: span 1;
   order: 3;
 }
 
+
+/* PRINCIPLES CARD SECTION */
+
 .projects__principles-card {
   grid-row: span 2;
   order: 2;
 }
 
+.projects__principles-embed {
+  width: 100%;
+  position: relative;
+  height: 100%;
+  border-radius: 0 0 10px 10px;
+}
+
+.principles__new-tab-icon {
+  position: absolute;
+  z-index: 1;
+  bottom: 4%;
+  right: 2%;
+  animation: bounce 1.2s ease-out infinite;
+}
+
+@keyframes bounce { 
+  0%, 20%, 50%, 80%, 100% {transform: translateY(0);} 
+  40% {transform: translateY(-20px);} 
+  60% {transform: translateY(-5px);} 
+}
+
+
+/* UNIVERSITY EXPERIENCE CARD SECTION */
+
 .projects__uva-card {
   grid-column: span 2;
   grid-row: span 2;
   order: 5;
+  width: 100%;
+  overflow: hidden;
+  max-height: 300px;
 }
+
+.projects__uva-experience-component-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* transform: scale(.5, .5); */
+  width: 100%;
+  height: 100%;
+  border-radius: 0 0 10px 10px;
+}
+
+.projects__uva-experience-component {
+  position: relative;
+  width: 100%;
+  max-height: 300px;
+  bottom: 250px;
+}
+
+
+/* ARTICLES CARD SECTION */
 
 .projects__articles-card {
   grid-row: span 2;
   order: 4;
 }
+
+@media screen and (max-width: 800px) {
+  .projects__articles-card {
+    order: 2;
+  }
+}
+
 .multi-carousel-container {
   display: flex;
   justify-content: center;
@@ -715,23 +798,13 @@ li.slide {
   color: white;
   padding: 5px 10px;
   border-radius: 5px;
-  transition: 1s;
+  transition: .5s;
   letter-spacing: .2em;
 }
 
 .carousel-card:hover {
   background: rgb(1, 1, 116);
-  cursor: pointer;
-}
-
-@media screen and (max-width: 660px) {
-  .projects__container{
-    grid-template-columns: repeat(2, minmax(200px, auto));
-    grid-template-rows: repeat(9, minmax(75px, auto));
-  }
-  .projects__articles-card {
-    order: 2;
-  }
+  cursor: default;
 }
 
 /* CONTACT SECTION */
