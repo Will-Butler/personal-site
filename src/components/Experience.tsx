@@ -44,7 +44,7 @@ const Experience = () => {
                     id="card1"
                     time="Jul 2023 - Current"
                     organization="Gap Year"
-                    position="Surf Instructor/Developer/Musician"
+                    position="Web Developer, Surf Instructor,  Musician"
                     location="Taiwan"
                     logo=""
                     content={[

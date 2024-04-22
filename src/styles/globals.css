@@ -367,15 +367,15 @@ li.slide {
   overflow: hidden;
   width: var(--card-width);
   margin-top: -2vh;
-  transition: all 1s ease-in-out 0s;
+  transition: max-height 1s ease-in-out 0s;
   border-radius: 0 0 7px 7px;
   max-height: 0px;
+  padding: 0px 20px 0px 30px;
 }
 
 .experience__expand-container-open {
   max-height: 400px;
-  transition: all 1s ease-in-out 0s;
-  padding: 0px 20px 20px 30px;
+  transition: max-height 1s ease-in-out 0s;
   list-style-type: circle;
 }
 
@@ -505,10 +505,10 @@ li.slide {
   max-width: 350px;
   border-color:lightgray;
   border-radius: 30px;
-  border-width: 1px;
+  /* border-width: 1px; */
   margin-right: 40px;
   position: relative;
-  box-shadow: -.5px 0px 1px black;
+  box-shadow: -2px 2px 5px black;
 }
 
 .uvaexperience__card-pic {

@@ -36,7 +36,7 @@ export default function App() {
     'projects': 3,
     'contact': 4
   }
-  const handleNextSectionNav = () => {
+  const handleNextSectionNav = async () => {
     let nextSection = section == 4 ? 0 : (section % 4) + 1;
     setSection(nextSection);
     sections[nextSection].scrollIntoView({block: "start", inline: "nearest", behavior: 'smooth'});

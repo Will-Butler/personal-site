@@ -31,6 +31,8 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({time, organization, posi
                 )}>
                 <div className={`experience__card-time ${playfairDisplay.className}`}>{time}</div>
                 <div className="experience__card-divider1"></div>
+                <div className={`experience__card-position ${playfairDisplay.className}`}>{position}</div>
+                <div className="experience__card-divider2"/>
                 <div className="experience__card-organization-container">
                     <div className="experience__card-organization-logo-overflow-container">
                         {logo ? 
@@ -46,8 +48,6 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({time, organization, posi
                     </div>
                     <div className={`experience__card-organization ${playfairDisplay.className}`}>{organization}</div>
                 </div>
-                <div className="experience__card-divider2"/>
-                <div className={`experience__card-position ${playfairDisplay.className}`}>{position}</div>
                 <div className="experience__card-divider3"/>
                 <div className={`experience__card-location ${playfairDisplay.className}`}>{location}</div>
             </div>
@@ -55,7 +55,7 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({time, organization, posi
                 'experience__expand-container',
                 {'experience__expand-container-open': moreInfo},
             )}>
-                <ul style={{ listStyleType: 'circle' }}>{contentList}</ul>
+                <ul style={{ listStyleType: 'circle', marginBottom: '10px' }}>{contentList}</ul>
             </div>
             <button onClick={() => setMoreInfo(!moreInfo)}>
                 <AiOutlineDown className={clsx(
