@@ -104,7 +104,7 @@ const Experience = () => {
                         experienceBullets["UVA_BULLET2"]
                     ]}
                 />
-                <a className={`experience__resume-link ${montserrat.className}`} href='/Resume.pdf'>
+                <a className={`experience__resume-link ${montserrat.className}`} href='/Resume.pdf' target="_blank">
                 <span><TfiNewWindow/></span><span>Resume</span>
                 </a> 
             </div>

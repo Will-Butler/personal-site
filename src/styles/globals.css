@@ -80,7 +80,6 @@ li.slide {
   -webkit-text-stroke-color: black;
   bottom: 5%;
   left: 5%;
-  z-index: 1;
   animation: first-name-animation 2s ease;
 }
 @keyframes first-name-animation {
@@ -89,12 +88,15 @@ li.slide {
 }
 
 .home-last-name {
+  margin-top: var(--title-line-height);
   margin-bottom: var(--title-line-height);
   position: absolute;
   color: transparent;
   font-size: 35vw;
-  bottom: 1%;
+  bottom: 5%;
   left: 5%;
+  right: 5%;
+  z-index: 1;
   -webkit-text-stroke-width: 3px;
   -webkit-text-stroke-color: white;
   stroke-width: 3px;
@@ -150,6 +152,8 @@ li.slide {
   position: relative;
   min-height: 100vh;
   background-color: white;
+  /* background: linear-gradient(320deg, darkblue 1%, rgb(58, 0, 58) 7%, white 30%) */
+  /* background: linear-gradient(0deg, darkblue 1%, rgb(58, 0, 58) 7%, white 20%, white 80%, rgb(58, 0, 58) 92%, darkblue 99%); */
 }
 
 .about__header-container {
@@ -245,6 +249,7 @@ li.slide {
   overflow: hidden;
   position: relative;
   background: linear-gradient(120deg, darkblue, rgb(58, 0, 58), black 25%, black);
+  /* background: linear-gradient(0deg, darkblue, rgb(58, 0, 58), black 20%, black 80%, rgb(58, 0, 58), darkblue); */
   min-height: 100vh;
 }
 
@@ -474,7 +479,7 @@ li.slide {
 
 .uvaexperience__gradient {
   /* background: linear-gradient(160deg, #ff9000 25%, #ffffff 44%, #0c00ff 58%, #ffffff 84%, #ff9000 100%); */
-  background: linear-gradient(120deg, #ff9000, #ffffff, #0a02a1e2, #ffffff, #ff9000);
+  background: linear-gradient(120deg, #ff9000, #ffffff, #050150e2, #ffffff, #ff9000);
   background-size: 300% 300%;
   animation: gradient 25s ease-in-out infinite;
 }
@@ -526,7 +531,8 @@ li.slide {
   flex-flow: row nowrap;
   align-items: center;
   justify-content: center;
-  margin: 5vh 0;
+  padding: 8vh 2vw;
+  /* background: linear-gradient(0deg, darkblue 1%, rgb(58, 0, 58) 7%, white 20%, white 80%, rgb(58, 0, 58) 92%, darkblue 99%); */
   /* height: 100vh; */
 }
 
@@ -807,6 +813,24 @@ li.slide {
   cursor: default;
 }
 
+/* PROJECTS BOUNCING LOGOS */
+
+.projects__bouncing-logo {
+  width: 20vw;
+  z-index: -1;
+  height: auto;
+  position: absolute;
+  opacity: .5;
+  animation: moveX 10s linear 0s infinite alternate, moveY 17s linear 0s infinite alternate;
+}
+@keyframes moveX {
+  from { left: 0vw; } to { left: 80vw; }
+}
+
+@keyframes moveY {
+  from { top: 0vh; } to { top: 80vw; }
+}
+
 /* CONTACT SECTION */
 
 .contact {
@@ -816,7 +840,7 @@ li.slide {
   align-items: center;
   position: relative;
   min-height: 100vh;
-  background: linear-gradient(250deg, darkblue, rgb(58, 0, 58), black 25%, black 85%, rgb(58, 0, 58), darkblue);
+  background: linear-gradient(180deg, darkblue, rgb(58, 0, 58), black 25%);
   overflow: scroll;
 }
 

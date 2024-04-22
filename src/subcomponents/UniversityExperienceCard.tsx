@@ -63,8 +63,8 @@ var settings = {
 const UniversityExperienceCard: React.FC = () => {
     const picSize = '160px';
     return (
-        <div className="projects__card projects__uva-card uvaexperience__gradient">
-                <div className="projects__card-header-container">
+        <div className="projects__card projects__uva-card uvaexperience__gradient"> 
+                <div className="projects__card-header-container" style={{boxShadow: '0px 1px 5px black'}}>
                     <PiGraduationCapLight/>
                     <div className={`projects__card-header-title ${montserrat.className}`}>University Experience</div>
                 </div>
