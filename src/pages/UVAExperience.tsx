@@ -22,7 +22,7 @@ interface UVAExperienceProps {
   picSize: string;
 }
 const UVAExperience: React.FC<UVAExperienceProps> = ({picSize}) => {
-    let sliderRef = useRef<Slider | null>(null);
+    let sliderRef = useRef<Slider>(null);
     const next = () => {
         sliderRef.slickNext();
     };
@@ -77,7 +77,7 @@ const UVAExperience: React.FC<UVAExperienceProps> = ({picSize}) => {
               </Link>
             </div>
             <div className="uvaexperience__carousel-container">
-                <Slider ref={slider => {sliderRef = slider;}} {...settings}>
+                <Slider ref={sliderRef} {...settings}>
                     <UVAExperienceCard
                     blurb={UVAExperienceContent["HOONS_BLURB"]}
                     paragraph="this is paragraph"

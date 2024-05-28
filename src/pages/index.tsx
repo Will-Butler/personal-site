@@ -39,12 +39,12 @@ export default function App() {
   const handleNextSectionNav = async () => {
     let nextSection = section == 4 ? 0 : (section % 4) + 1;
     setSection(nextSection);
-    sections[nextSection].scrollIntoView({block: "start", inline: "nearest", behavior: 'smooth'});
+    sections[nextSection]!.scrollIntoView({block: "start", inline: "nearest", behavior: 'smooth'});
   }
   const handlePrevSectionNav = () => {
     let prevSection = section == 0 ? 4 : section - 1;
     setSection(prevSection);
-    sections[prevSection].scrollIntoView({block: "start", inline: "nearest", behavior: 'smooth'});
+    sections[prevSection]!.scrollIntoView({block: "start", inline: "nearest", behavior: 'smooth'});
   }
 
   let observerOptions = {
@@ -52,7 +52,7 @@ export default function App() {
     threshold: .5
   };
 
-  const observerCallback =((entries, observer) => {
+  const observerCallback =((entries: any, observer) => {
     entries.forEach((entry: IntersectionObserverEntry) => {
       if (entry.isIntersecting && entry.intersectionRatio >=.5){
         setSection(sectionIndexes[entry.target.id])
