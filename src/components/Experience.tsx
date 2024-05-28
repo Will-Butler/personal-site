@@ -18,7 +18,7 @@ const Experience = () => {
     useEffect(() => {
         let ctx = gsap.context(() => {
             var cards = gsap.utils.toArray('.experience__card-subcontainer');
-            cards.forEach((card, index) => {
+            cards!.forEach((card: any, index) => {
                 gsap.from(card, {
                     xPercent: 0,
                     y: index * -100,
