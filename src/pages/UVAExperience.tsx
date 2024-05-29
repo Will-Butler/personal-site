@@ -24,10 +24,10 @@ interface UVAExperienceProps {
 const UVAExperience: React.FC<UVAExperienceProps> = ({picSize}) => {
     let sliderRef = useRef<Slider>(null);
     const next = () => {
-        sliderRef.slickNext();
+        sliderRef?.current?.slickNext();
     };
     const previous = () => {
-        sliderRef.slickPrev();
+        sliderRef?.current?.slickPrev();
     };
 
     var settings = {
@@ -61,7 +61,7 @@ const UVAExperience: React.FC<UVAExperienceProps> = ({picSize}) => {
                 }
               },
               {
-                breakpoint: 620,
+                breakpoint: 715,
                 settings: {
                   slidesToShow: 1,
                 }

@@ -4,6 +4,7 @@ import ExperienceCard from '../subcomponents/ExperienceCard';
 import NasaLogo from '../../public/NasaLogo.png';
 import AmazonLogo from '../../public/AmazonLogo.png';
 import UVALogo from '../../public/UVALogo.png';
+import TaiwanFlag from '../../public/TaiwanFlag.png';
 import { experienceBullets } from '../text/ExperienceBullets'
 import gsap from 'gsap';
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
@@ -44,9 +45,9 @@ const Experience = () => {
                     id="card1"
                     time="Jul 2023 - Current"
                     organization="Gap Year"
-                    position="Web Developer, Surf Instructor,  Musician"
+                    position="Web Developer, Surf Instructor, Professional Vagabond"
                     location="Taiwan"
-                    logo=""
+                    logo={TaiwanFlag}
                     content={[
                         experienceBullets["GAP_YEAR_BULLET1"], 
                         experienceBullets["GAP_YEAR_BULLET2"], 
@@ -71,7 +72,7 @@ const Experience = () => {
                     id="card3"
                     time="Summer 2021"
                     organization="NASA"
-                    position="Project Intern"
+                    position="Mission Design Intern"
                     location="Remote"
                     logo={NasaLogo}
                     content={[
@@ -83,7 +84,7 @@ const Experience = () => {
                 <ExperienceCard
                     id="card4"
                     time="Sep 2020 - May 2022"
-                    organization="University of Virginia"
+                    organization="UVA"
                     position="CS Teaching Assistant"
                     location="Charlottesville"
                     logo={UVALogo}
@@ -95,7 +96,7 @@ const Experience = () => {
                 <ExperienceCard
                     id="card5"
                     time="Sep 2019 - May 2023"
-                    organization="University of Virginia"
+                    organization="UVA"
                     position="Student"
                     location="Charlottesville"
                     logo={UVALogo}

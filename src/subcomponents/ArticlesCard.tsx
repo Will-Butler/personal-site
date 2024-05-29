@@ -1,15 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import { AiOutlineFileText } from "react-icons/ai";
 import { openSans, montserrat, playfairDisplay } from '../styles/fonts';
 
 
 const ArticlesCard: React.FC = () => {
+    const [loadingSite, setLoadingSite] = useState(true);
+
     return (
         <div className="projects__card projects__articles-card">
             <div className="projects__card-header-container">
                 <AiOutlineFileText/>
                 <div className={`projects__card-header-title ${montserrat.className}`}>Articles</div>
             </div>
+            <iframe
+                className="articles__iframe"
+                src="https://medium.com/"
+                onLoad={() => setLoadingSite(false)}                
+            ></iframe>
+            {loadingSite ? <p> Loading articles</p> : null}
         </div>
     )
 };

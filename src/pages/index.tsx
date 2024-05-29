@@ -15,12 +15,12 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function App() {
   // const navigate = useNavigate();
-  const [section, setSection] = useState(0);
-  const home = document.querySelector('#home')
-  const about = document.querySelector('#about')
-  const experience = document.querySelector('#experience')
-  const projects = document.querySelector('#projects')
-  const contact = document.querySelector('#contact')
+  const [section, setSection] = useState<any>(0);
+  const home = '#home'
+  const about = '#about'
+  const experience = '#experience'
+  const projects = '#projects'
+  const contact = '#contact'
   const sections = [home, about, experience, projects, contact];
 
   const sectionIndexes: {
@@ -39,12 +39,13 @@ export default function App() {
   const handleNextSectionNav = async () => {
     let nextSection = section == 4 ? 0 : (section % 4) + 1;
     setSection(nextSection);
-    sections[nextSection]!.scrollIntoView({block: "start", inline: "nearest", behavior: 'smooth'});
+    document.querySelector(sections[nextSection])!.scrollIntoView({block: "start", inline: "nearest", behavior: 'smooth'});
   }
   const handlePrevSectionNav = () => {
     let prevSection = section == 0 ? 4 : section - 1;
     setSection(prevSection);
-    sections[prevSection]!.scrollIntoView({block: "start", inline: "nearest", behavior: 'smooth'});
+    console.log(sections)
+    document.querySelector(sections[prevSection])!.scrollIntoView({block: "start", inline: "nearest", behavior: 'smooth'});
   }
 
   let observerOptions = {
@@ -52,10 +53,10 @@ export default function App() {
     threshold: .5
   };
 
-  const observerCallback =((entries: any, observer) => {
+  const observerCallback =((entries: any, observer: any) => {
     entries.forEach((entry: IntersectionObserverEntry) => {
       if (entry.isIntersecting && entry.intersectionRatio >=.5){
-        setSection(sectionIndexes[entry.target.id])
+        setSection(sectionIndexes[entry.target.id as keyof Object])
       }
     });
   })
@@ -64,11 +65,11 @@ export default function App() {
 
   useEffect(() => {
     if(home != null){
-      observer.observe(home);
-      observer.observe(about);
-      observer.observe(experience);
-      observer.observe(projects);
-      observer.observe(contact);
+      observer.observe(document.querySelector(home)!);
+      observer.observe(document.querySelector(about)!);
+      observer.observe(document.querySelector(experience)!);
+      observer.observe(document.querySelector(projects)!);
+      observer.observe(document.querySelector(contact)!);
     }
   }, [home, about, experience, projects, contact])  
 
