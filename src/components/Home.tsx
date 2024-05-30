@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import Image from "next/image";
 import homeImage from '../../public/IndiaMountainFullBody.jpg';
+import croppedImage from '../../public/crop2.png';
 import { openSans, montserrat, playfairDisplay } from '../styles/fonts';
 import gsap from 'gsap';
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
@@ -14,6 +15,15 @@ const Home = () => {
         let ctx = gsap.context(() => {
             ScrollTrigger.create({
                 trigger: "#background",
+                    start: "top top",
+                    end: "+=300px",
+                    scrub: true,
+                    // markers: true,
+                    pin: true,
+                    pinSpacing: false
+            })
+            ScrollTrigger.create({
+                trigger: "#background2",
                     start: "top top",
                     end: "+=300px",
                     scrub: true,
@@ -36,6 +46,16 @@ const Home = () => {
                 priority
                 fill
                 // objectPosition='left top'
+                />
+                <Image
+                id="background2"
+                className="bg-img-crop"
+                alt="Home Cover Image2"
+                src={croppedImage}
+                placeholder="blur"
+                quality={100}
+                // priority
+                fill
                 />
                 <h1 className={`home-first-name ${openSans.className}`}>Will</h1>
                 <h1 className={`home-last-name ${openSans.className}`}>Butler</h1>

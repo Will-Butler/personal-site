@@ -122,11 +122,22 @@ li.slide {
 
 .bg-img{
   position: absolute;
+  background-image: url('../../public/IndiaMountainFullBody.jpg'),
+  url('../../public/crop2.png');
   min-height: 700px;
   max-height: 1000px;
   z-index: -1;
   object-fit: cover;
 }
+
+.bg-img-crop {
+  position: absolute;
+  min-height: 700px;
+  max-height: 1000px;
+  z-index: 1;
+  object-fit: cover;
+}
+
 
 .home-attribute-container {
   display: flex;
@@ -164,6 +175,7 @@ li.slide {
   position: relative;
   min-height: 100vh;
   background-color: white;
+  z-index: 1;
   /* background: linear-gradient(320deg, darkblue 1%, rgb(58, 0, 58) 7%, white 30%) */
   /* background: linear-gradient(0deg, darkblue 1%, rgb(58, 0, 58) 7%, white 20%, white 80%, rgb(58, 0, 58) 92%, darkblue 99%); */
 }
