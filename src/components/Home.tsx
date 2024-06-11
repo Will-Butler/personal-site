@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import Image from "next/image";
 import homeImage from '../../public/IndiaMountainFullBody.jpg';
-import croppedImage from '../../public/crop2.png';
+import croppedImage from '../../public/crop.png';
 import { openSans, montserrat, playfairDisplay } from '../styles/fonts';
 import gsap from 'gsap';
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";

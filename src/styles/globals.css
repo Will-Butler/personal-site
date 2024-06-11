@@ -123,7 +123,7 @@ li.slide {
 .bg-img{
   position: absolute;
   background-image: url('../../public/IndiaMountainFullBody.jpg'),
-  url('../../public/crop2.png');
+  url('../../public/crop.png');
   min-height: 700px;
   max-height: 1000px;
   z-index: -1;
@@ -647,8 +647,8 @@ li.slide {
 
 .unifounderscard__image-container {
   position: relative;
-  /* width: 100%; */
-  height: auto;
+  width: 100%;
+  height: 100%;
 }
 
 .unifounderscard__iframe {
@@ -657,7 +657,8 @@ li.slide {
 
 .unifounderscard__image {
   object-fit: cover;
-  border-radius: 0 0 20px 20px;
+  border-radius: 0 0 10px 10px;
+  height: 100%;
 }
 
 /* TECHARSENAL CARD SECTION */
@@ -744,6 +745,7 @@ li.slide {
   object-fit: fill;
   overflow: hidden;
   padding: auto;
+  max-height: 300px;
 }
 
 .articles__iframe {
