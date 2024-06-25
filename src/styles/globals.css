@@ -122,8 +122,8 @@ li.slide {
 
 .bg-img{
   position: absolute;
-  background-image: url('../../public/IndiaMountainFullBody.jpg'),
-  url('../../public/crop.png');
+  /* background-image: url('../../public/IndiaMountainFullBody.jpg'),
+  url('../../public/crop.png'); */
   min-height: 700px;
   max-height: 1000px;
   z-index: -1;
@@ -571,7 +571,7 @@ li.slide {
   display: grid;
   padding: 10px;
   grid-template-columns: repeat(3, minmax(250px, 300px));
-  gap: 10px;
+  gap: 25px;
   grid-template-rows: repeat(6, minmax(75px, auto));
   padding: 20px;
   align-content: center;
@@ -661,7 +661,7 @@ li.slide {
   height: 100%;
 }
 
-/* TECHARSENAL CARD SECTION */
+/* TECHcAL CARD SECTION */
 
 .projects__tech-arsenal-card {
   grid-row: span 1;
@@ -697,7 +697,7 @@ li.slide {
   z-index: 1;
   bottom: 4%;
   right: 2%;
-  animation: bounce 1.2s ease-out infinite;
+  animation: bounce 1.3s ease-out infinite 3s;
 }
 
 @keyframes bounce { 
@@ -768,7 +768,7 @@ li.slide {
 }
 
 .carousel-wrapper {
-  --time: 20s;
+  --time: 80s;
   position: relative;
   display: flex;
   width: 100%;

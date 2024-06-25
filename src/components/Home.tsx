@@ -16,16 +16,16 @@ const Home = () => {
             ScrollTrigger.create({
                 trigger: "#background",
                     start: "top top",
-                    end: "+=300px",
+                    end: "+=50px",
                     scrub: true,
                     // markers: true,
                     pin: true,
                     pinSpacing: false
-            })
+            }),
             ScrollTrigger.create({
                 trigger: "#background2",
                     start: "top top",
-                    end: "+=300px",
+                    end: "+=50px",
                     scrub: true,
                     // markers: true,
                     pin: true,
@@ -62,7 +62,7 @@ const Home = () => {
                 <div className='home-attribute-container'>
                     <div className={`home-attribute-title ${montserrat.className}`}>Programmer.</div>
                     <div className={`home-attribute-title ${montserrat.className}`}>Designer.</div>
-                    <div className={`home-attribute-title ${montserrat.className}`}>Musician.</div>
+                    <div className={`home-attribute-title ${montserrat.className}`}>Writer.</div>
                     {/* <div className={`home-current-status ${playfairDisplay.className} text-sm text-white`}>...looking for a software developer position.</div> */}
                 </div>
 

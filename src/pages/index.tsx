@@ -76,14 +76,14 @@ export default function App() {
   return (
     <Router>
       <div className="page-wrapper">
-        <div className="floating-nav-container">
+        {/* <div className="floating-nav-container">
           <button onClick={()=>{handlePrevSectionNav()}}>
             <AiFillUpSquare className="floating-nav-button"/>
           </button>
           <button onClick={()=>{handleNextSectionNav()}}>
             <AiFillDownSquare className="floating-nav-button"/>
           </button>
-        </div>
+        </div> */}
         <ul id="slides" className="slides">
           <li id="home" className="slide">
             <Home/>

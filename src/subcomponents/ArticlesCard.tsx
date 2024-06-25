@@ -13,7 +13,7 @@ const ArticlesCard: React.FC = () => {
         <div className="projects__card projects__articles-card">
             <div className="projects__card-header-container">
                 <AiOutlineFileText/>
-                <div className={`projects__card-header-title ${montserrat.className}`}>Articles</div>
+                <div className={`projects__card-header-title ${montserrat.className}`}>Published Articles</div>
             </div>
             {/* <iframe
                 className="articles__iframe"
