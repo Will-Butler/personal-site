@@ -862,6 +862,7 @@ li.slide {
 
 .projects__bouncing-logo {
   width: 20vw;
+  max-width: 150px;
   z-index: -1;
   height: auto;
   position: absolute;
@@ -873,7 +874,7 @@ li.slide {
 }
 
 @keyframes moveY {
-  from { top: 0vh; } to { top: 80vw; }
+  from { top: 55vh; } to { top: 85vh; }
 }
 
 /* CONTACT SECTION */
@@ -884,10 +885,26 @@ li.slide {
   justify-content: flex-start;
   align-items: center;
   position: relative;
-  min-height: 100vh;
-  background: linear-gradient(180deg, darkblue, rgb(58, 0, 58), black 25%);
+  /* min-height: 100vh; */
+  height: 100%;
   overflow: scroll;
 }
+.contact-top {
+  min-height: 50vh;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(180deg, darkblue, rgb(58, 0, 58), black 25%);
+  padding-bottom: 1vh;
+}
+.contact-bottom {
+  min-height: 50vh;
+  height: 100%;
+  width: 100%;
+  /* background: white; */
+  background: linear-gradient(180deg, black 5%,white 95%);
+  z-index: -1;
+}
+
 
 .contact__title {
   font-size: 18vw;
