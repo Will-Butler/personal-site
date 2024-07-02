@@ -460,7 +460,7 @@ li.slide {
 }
 
 .uvaexperience__return-icon {
-  font-size: 20vw;
+  font-size: min(12vw, 100px);
   color: rgb(239, 239, 239);
   opacity: .9;
   transition: all 1s ease 0s;
@@ -502,7 +502,7 @@ li.slide {
   color: rgb(239, 239, 239);
   opacity: .5;
   transition: all 1s ease 0s;
-  font-size: 20vw;
+  font-size: min(20vw, 250px);
 }
 
 .uvaexperience__carousel-arrow:hover {
