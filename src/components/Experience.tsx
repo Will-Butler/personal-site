@@ -5,6 +5,7 @@ import NasaLogo from '../../public/NasaLogo.png';
 import AmazonLogo from '../../public/AmazonLogo.png';
 import UVALogo from '../../public/UVALogo.png';
 import TaiwanFlag from '../../public/TaiwanFlag.png';
+import UnifoundersLogo from '../../public/UniFounders-Logo.png';
 import { experienceBullets } from '../text/ExperienceBullets'
 import gsap from 'gsap';
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
@@ -42,8 +43,21 @@ const Experience = () => {
             <div className='experience__card-container'>
                 <div id="card1">
                 <ExperienceCard
+                    id="card0"
+                    time="Jul 2024 - Current"
+                    organization="UniFounders"
+                    position="Founder & Software Developer"
+                    location="Remote"
+                    logo={UnifoundersLogo}
+                    content={[
+                        experienceBullets["UNIFOUNDERS_BULLET1"], 
+                        experienceBullets["UNIFOUNDERS_BULLET2"], 
+                        experienceBullets["UNIFOUNDERS_BULLET3"], 
+                    ]}
+                />
+                <ExperienceCard
                     id="card1"
-                    time="Jul 2023 - Current"
+                    time="Jul 2023 - Jul 2024"
                     organization="Gap Year"
                     position="Professional Vagabond"
                     location="Taiwan"
@@ -52,6 +66,18 @@ const Experience = () => {
                         experienceBullets["GAP_YEAR_BULLET1"], 
                         experienceBullets["GAP_YEAR_BULLET2"], 
                         experienceBullets["GAP_YEAR_BULLET3"] 
+                    ]}
+                />
+                <ExperienceCard
+                    id="card5"
+                    time="Sep 2019 - May 2023"
+                    organization="UVA"
+                    position="Student"
+                    location="Charlottesville"
+                    logo={UVALogo}
+                    content={[
+                        experienceBullets["UVA_BULLET1"],
+                        experienceBullets["UVA_BULLET2"]
                     ]}
                 />
                 </div>
@@ -93,19 +119,7 @@ const Experience = () => {
                         experienceBullets["TA_BULLET2"]
                     ]}
                 />
-                <ExperienceCard
-                    id="card5"
-                    time="Sep 2019 - May 2023"
-                    organization="UVA"
-                    position="Student"
-                    location="Charlottesville"
-                    logo={UVALogo}
-                    content={[
-                        experienceBullets["UVA_BULLET1"],
-                        experienceBullets["UVA_BULLET2"]
-                    ]}
-                />
-                <a className={`experience__resume-link ${montserrat.className}`} href='/Resume.pdf' target="_blank">
+                <a className={`experience__resume-link ${montserrat.className}`} href='/Resume12.24.pdf' target="_blank">
                 <span><TfiNewWindow/></span><span>Resume</span>
                 </a> 
             </div>

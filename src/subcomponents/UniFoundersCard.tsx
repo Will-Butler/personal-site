@@ -1,6 +1,6 @@
 import React, {useState} from "react";
-import logo from "../../public/FinalLogo.png";
-import homePage from "../../public/UniFoundersLP.png"
+// import unifoundersLogo from "../../public/UniFounders-Logo.png"
+import unifoundersLogo from "../../public/UniF-Site-Pic.jpeg"
 import Image from "next/image";
 import { AiOutlineProject } from "react-icons/ai";
 import { TfiNewWindow } from "react-icons/tfi";
@@ -42,12 +42,12 @@ const UniFoundersCard: React.FC = ({}) => {
                     style={{objectFit: "cover"}}	
                 />
             </div> */}
-            <a href="https://unifounders.onrender.com" 
+            <a href="https://uni-founders.com" 
                 target="_blank" 
                 className="projects__principles-embed">
                 <Image
                     style={{objectFit: "cover", height: '100%'}}	
-                    src={homePage}
+                    src={unifoundersLogo}
                     title="View UniFounders Site"
                     alt="Click Here to View UniFounders Site"
                 />
