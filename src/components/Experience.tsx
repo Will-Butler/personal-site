@@ -44,7 +44,7 @@ const Experience = () => {
                 <div id="card1">
                 <ExperienceCard
                     id="card0"
-                    time="Jul 2024 - Current"
+                    time="Jul 2023 - Current"
                     organization="UniFounders"
                     position="Founder & Software Developer"
                     location="Remote"
