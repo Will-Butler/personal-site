@@ -6,8 +6,8 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
-  --title-line-height: calc(-.6 * 0.5em);
-  --uva-experience-carousel-height: 40vh;
+  --title-line-height: calc(-0.6 * 0.5em);
+  --uva-experience-carousel-height: 60%;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -28,7 +28,7 @@ body {
   min-height: 100%;
 }
 
-.floating-nav-container{
+.floating-nav-container {
   position: fixed;
   right: 1%;
   top: 5%;
@@ -42,14 +42,14 @@ body {
 .floating-nav-button {
   position: relative;
   margin: 1vh;
-  opacity: .6;
+  opacity: 0.6;
   color: gray;
   font-size: 50px;
   transition: all 1s ease 0;
 }
 
 .floating-nav-button:hover {
-  opacity: .9;
+  opacity: 0.9;
   cursor: pointer;
 }
 
@@ -116,11 +116,15 @@ li.slide {
 }
 
 @keyframes last-name-animation {
-  0%{color: white;}
-  100%{color: transparent;}
+  0% {
+    color: white;
+  }
+  100% {
+    color: transparent;
+  }
 }
 
-.bg-img{
+.bg-img {
   position: absolute;
   /* background-image: url('../../public/IndiaMountainFullBody.jpg'),
   url('../../public/crop.png'); */
@@ -138,7 +142,6 @@ li.slide {
   object-fit: cover;
 }
 
-
 .home-attribute-container {
   display: flex;
   flex-flow: row nowrap;
@@ -151,7 +154,6 @@ li.slide {
 .home-attribute-title {
   font-size: 25px;
   position: relative;
-
 }
 
 .home-current-status {
@@ -188,7 +190,6 @@ li.slide {
   position: relative;
   width: 100%;
   margin: 3vh 3vw 1vh 3vw;
-
 }
 
 .about__headshot {
@@ -258,7 +259,7 @@ li.slide {
 }
 @media screen and (min-width: 700px) {
   .about__content-section {
-     font-size: 30px;
+    font-size: 30px;
   }
 }
 
@@ -272,7 +273,13 @@ li.slide {
   align-items: center;
   overflow: hidden;
   position: relative;
-  background: linear-gradient(120deg, darkblue, rgb(58, 0, 58), black 25%, black);
+  background: linear-gradient(
+    120deg,
+    darkblue,
+    rgb(58, 0, 58),
+    black 25%,
+    black
+  );
   /* background: linear-gradient(0deg, darkblue, rgb(58, 0, 58), black 20%, black 80%, rgb(58, 0, 58), darkblue); */
   min-height: 100vh;
 }
@@ -307,12 +314,12 @@ li.slide {
   margin: 2vh 5vw;
   width: var(--card-width);
   max-height: 60px;
-  transition: border-radius .5s ease-out 2.0s;
+  transition: border-radius 0.5s ease-out 2s;
 }
 
 .experience__card-expand {
   border-radius: 7px 7px 0px 0px;
-  transition: border-radius .1s ease-out 0s;
+  transition: border-radius 0.1s ease-out 0s;
 }
 
 .experience__card-divider1 {
@@ -364,7 +371,7 @@ li.slide {
   /* height: 208px; */
   overflow: hidden;
   margin: auto;
-  opacity: .1;
+  opacity: 0.1;
 }
 
 .experience__card-organization {
@@ -414,7 +421,7 @@ li.slide {
 
 .experience__expand-arrow:hover {
   color: black;
-  background-color:white;
+  background-color: white;
 }
 
 .experience__expand-arrow-flip {
@@ -462,7 +469,7 @@ li.slide {
 .uvaexperience__return-icon {
   font-size: min(12vw, 100px);
   color: rgb(239, 239, 239);
-  opacity: .9;
+  opacity: 0.9;
   transition: all 1s ease 0s;
 }
 
@@ -500,7 +507,7 @@ li.slide {
 
 .uvaexperience__carousel-arrow {
   color: rgb(239, 239, 239);
-  opacity: .5;
+  opacity: 0.5;
   transition: all 1s ease 0s;
   font-size: min(20vw, 250px);
 }
@@ -511,14 +518,27 @@ li.slide {
 
 .uvaexperience__gradient {
   /* background: linear-gradient(160deg, #ff9000 25%, #ffffff 44%, #0c00ff 58%, #ffffff 84%, #ff9000 100%); */
-  background: linear-gradient(120deg, #ff9000, #ffffff, #050150e2, #ffffff, #ff9000);
+  background: linear-gradient(
+    120deg,
+    #ff9000,
+    #ffffff,
+    #050150e2,
+    #ffffff,
+    #ff9000
+  );
   background-size: 300% 300%;
   animation: gradient 25s ease-in-out infinite;
 }
 @keyframes gradient {
-  0%{background-position: 0% 20%}
-  50%{background-position: 100% 80%}
-  100%{background-position: 0% 20%}
+  0% {
+    background-position: 0% 20%;
+  }
+  50% {
+    background-position: 100% 80%;
+  }
+  100% {
+    background-position: 0% 20%;
+  }
 }
 
 /* UVA EXPERIENCE CARD SECTION */
@@ -529,12 +549,12 @@ li.slide {
   justify-content: flex-start;
   align-items: center;
   background-color: white;
-  min-height: 250px;
-  max-height: 450px;
+  /* min-height: 250px;
+  max-height: 450px; */
   height: auto;
   min-width: 300px;
   max-width: 350px;
-  border-color:lightgray;
+  border-color: lightgray;
   border-radius: 30px;
   /* border-width: 1px; */
   margin-right: 40px;
@@ -557,7 +577,7 @@ li.slide {
 
 /* PROJECTS SECTION */
 
-.projects__center-grid {
+.bentobox__center-grid {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
@@ -567,7 +587,7 @@ li.slide {
   /* height: 100vh; */
 }
 
-.projects__container {
+.bentobox__container {
   display: grid;
   padding: 10px;
   grid-template-columns: repeat(3, minmax(250px, 300px));
@@ -578,13 +598,13 @@ li.slide {
   margin: auto;
 }
 @media screen and (max-width: 800px) {
-  .projects__container{
+  .bentobox__container {
     grid-template-columns: repeat(2, minmax(250px, 300px));
     grid-template-rows: repeat(9, minmax(75px, auto));
   }
 }
 
-.projects__card {
+.bentobox__card {
   display: flex;
   align-items: flex-start;
   /* justify-content: center; */
@@ -592,13 +612,13 @@ li.slide {
   grid-column: span 1;
   border-radius: 10px;
   border-width: 2px;
-  background-color: white; 
+  background-color: white;
   box-shadow: -2px 2px 6px black;
   flex-flow: column nowrap;
   /* padding: 10px; */
 }
 
-.projects__card-header-container {
+.bentobox__card-header-container {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
@@ -608,13 +628,13 @@ li.slide {
   width: 100%;
 }
 
-.projects__card-header-title {
+.bentobox__card-header-title {
   font-size: 16px;
 }
 
-/* UNIFOUNDERS CARD SECTION */
+/* PROJECTS CARD SECTION */
 
-.projects__unifounders-card {
+.bentobox__projects-card {
   grid-row: span 4;
   grid-column: span 2;
   order: 0;
@@ -624,15 +644,15 @@ li.slide {
   overflow: hidden;
 }
 
-.unifounderscard__header-container {
+.bentobox__projects-card-header-container {
   display: flex;
   flex-flow: row nowrap;
   padding: 0px 10px;
   margin-top: -10px;
 }
 
-.unifounderscard__title {
-  color: #04555E;
+.bentobox__projects-card-header-title {
+  color: #04555e;
   font-size: 80px;
   font-weight: 550;
   margin: 0px 15px -10px 15px;
@@ -640,22 +660,18 @@ li.slide {
   /* text-align: center; */
 }
 
-.unifounderscard__icon {
+.bentobox__projects-card-icon {
   object-fit: contain;
   width: 70px;
 }
 
-.unifounderscard__image-container {
+.bentobox__projects-card-image-container {
   position: relative;
   width: 100%;
   height: 100%;
 }
 
-.unifounderscard__iframe {
-  height: 100%;
-}
-
-.unifounderscard__image {
+.bentobox__projects-card-image {
   object-fit: cover;
   border-radius: 0 0 10px 10px;
   height: 100%;
@@ -663,29 +679,27 @@ li.slide {
 
 /* TECHcAL CARD SECTION */
 
-.projects__tech-arsenal-card {
+.bentobox__tech-arsenal-card {
   grid-row: span 1;
   order: 1;
   /* background: linear-gradient(120deg, teal, white); */
 }
 
-
 /* SOFT SKILLS CARD SECTION */
 
-.projects__soft-skills-card {
+.bentobox__soft-skills-card {
   grid-row: span 1;
   order: 3;
 }
 
-
 /* PRINCIPLES CARD SECTION */
 
-.projects__principles-card {
+.bentobox__principles-card {
   grid-row: span 2;
   order: 2;
 }
 
-.projects__principles-embed {
+.bentobox__newtab-embed {
   width: 100%;
   position: relative;
   height: 100%;
@@ -700,25 +714,36 @@ li.slide {
   animation: bounce 1.3s ease-out infinite 3s;
 }
 
-@keyframes bounce { 
-  0%, 20%, 50%, 80%, 100% {transform: translateY(0);} 
-  40% {transform: translateY(-20px);} 
-  60% {transform: translateY(-5px);} 
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-20px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
 }
-
 
 /* UNIVERSITY EXPERIENCE CARD SECTION */
 
-.projects__uva-card {
+.bentobox__uva-card {
   grid-column: span 2;
   grid-row: span 2;
   order: 5;
   width: 100%;
   overflow: hidden;
   max-height: 300px;
+  display: flex;
+  flex-direction: column;
 }
 
-.projects__uva-experience-component-container {
+.bentobox__uva-experience-component-container {
   position: relative;
   display: flex;
   justify-content: center;
@@ -729,17 +754,16 @@ li.slide {
   border-radius: 0 0 10px 10px;
 }
 
-.projects__uva-experience-component {
+.bentobox__uva-experience-component {
   position: relative;
   width: 100%;
   max-height: 300px;
   bottom: 250px;
 }
 
-
 /* ARTICLES CARD SECTION */
 
-.projects__articles-card {
+.bentobox__articles-card {
   grid-row: span 2;
   order: 4;
   object-fit: fill;
@@ -753,7 +777,7 @@ li.slide {
 }
 
 @media screen and (max-width: 800px) {
-  .projects__articles-card {
+  .bentobox__articles-card {
     order: 2;
   }
 }
@@ -774,8 +798,20 @@ li.slide {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  -webkit-mask-image: linear-gradient(90deg, transparent, #fff 20%, #fff 80%, transparent);
-  mask-image: linear-gradient(90deg, transparent, #fff 20%, #fff 80%, transparent);
+  -webkit-mask-image: linear-gradient(
+    90deg,
+    transparent,
+    #fff 20%,
+    #fff 80%,
+    transparent
+  );
+  mask-image: linear-gradient(
+    90deg,
+    transparent,
+    #fff 20%,
+    #fff 80%,
+    transparent
+  );
 }
 
 .carousel-forward {
@@ -801,44 +837,36 @@ li.slide {
 }
 
 @keyframes carousel-animation-forward {
-  0%
-  {
-    transform: translateX(100%)
+  0% {
+    transform: translateX(100%);
   }
-  100%
-  {
-    transform: translateX(-100%)
+  100% {
+    transform: translateX(-100%);
   }
 }
 @keyframes carousel-animation-forward2 {
-  0%
-  {
-    transform: translateX(0%)
+  0% {
+    transform: translateX(0%);
   }
-  100%
-  {
-    transform: translateX(-200%)
+  100% {
+    transform: translateX(-200%);
   }
 }
 @keyframes carousel-animation-backward {
-  0%
-  {
-    transform: translateX(-100%)
+  0% {
+    transform: translateX(-100%);
   }
-  100%
-  {
-    transform: translateX(100%)
+  100% {
+    transform: translateX(100%);
   }
 }
 
 @keyframes carousel-animation-backward2 {
-  0%
-  {
-    transform: translateX(-200%)
+  0% {
+    transform: translateX(-200%);
   }
-  100%
-  {
-    transform: translateX(0%)
+  100% {
+    transform: translateX(0%);
   }
 }
 
@@ -849,8 +877,8 @@ li.slide {
   color: white;
   padding: 5px 10px;
   border-radius: 5px;
-  transition: .5s;
-  letter-spacing: .2em;
+  transition: 0.5s;
+  letter-spacing: 0.2em;
 }
 
 .carousel-card:hover {
@@ -860,21 +888,32 @@ li.slide {
 
 /* PROJECTS BOUNCING LOGOS */
 
-.projects__bouncing-logo {
+.bentobox__bouncing-logo {
   width: 20vw;
   max-width: 150px;
   z-index: -1;
   height: auto;
   position: absolute;
-  opacity: .5;
-  animation: moveX 10s linear 0s infinite alternate, moveY 17s linear 0s infinite alternate;
+  opacity: 0.5;
+  animation: moveX 10s linear 0s infinite alternate,
+    moveY 17s linear 0s infinite alternate;
 }
 @keyframes moveX {
-  from { left: 0vw; } to { left: 80vw; }
+  from {
+    left: 0vw;
+  }
+  to {
+    left: 80vw;
+  }
 }
 
 @keyframes moveY {
-  from { top: 55vh; } to { top: 85vh; }
+  from {
+    top: 55vh;
+  }
+  to {
+    top: 85vh;
+  }
 }
 
 /* CONTACT SECTION */
@@ -901,10 +940,9 @@ li.slide {
   height: 100%;
   width: 100%;
   /* background: white; */
-  background: linear-gradient(180deg, black 5%,white 95%);
+  background: linear-gradient(180deg, black 5%, white 95%);
   z-index: -1;
 }
-
 
 .contact__title {
   font-size: 18vw;
@@ -942,3 +980,224 @@ li.slide {
   rotate: 360deg;
 }
 
+/* Add these styles to your globals.css */
+
+.projectspage {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+  overflow: hidden;
+  background-color: white;
+}
+
+.projectspage__gradient {
+  background: linear-gradient(
+    120deg,
+    darkblue,
+    rgb(58, 0, 58),
+    black 25%,
+    black
+  );
+}
+
+.projectspage__return-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  margin: 2vh 0 0 3vw;
+}
+
+.projectspage__return-icon {
+  font-size: min(12vw, 100px);
+  color: rgb(239, 239, 239);
+  opacity: 0.9;
+  transition: all 1s ease 0s;
+}
+
+.projectspage__return-icon:hover {
+  color: rgb(175, 175, 175);
+}
+
+.projectspage__title {
+  font-size: 4rem;
+  color: white;
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.projectspage__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.projectspage__card {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.projectspage__card:hover {
+  transform: translateY(-5px);
+}
+
+.projectspage__card-image-container {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.projectspage__card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.projectspage__card:hover .projectspage__card-image {
+  transform: scale(1.05);
+}
+
+.projectspage__card-content {
+  padding: 1.5rem;
+}
+
+.projectspage__card-title {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.projectspage__card-description {
+  color: #666;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.projectspage__card-technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.projectspage__tech-tag {
+  background: #f0f0f0;
+  color: #333;
+  padding: 0.25rem 0.75rem;
+  border-radius: 15px;
+  font-size: 0.875rem;
+}
+
+.projectspage__card-button {
+  display: inline-block;
+  background: linear-gradient(120deg, darkblue, rgb(58, 0, 58));
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+.projectspage__card-button:hover {
+  opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+  .projectspage__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .projectspage__title {
+    font-size: 2.5rem;
+  }
+}
+
+/* Add these styles for the UVA Experience card carousel */
+.bentobox__uva-carousel-container {
+  width: 100%;
+  height: 100% !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.bentobox__uva-carousel-container .slick-slider {
+  width: 100%;
+  height: 100%;
+}
+
+.bentobox__uva-carousel-container .slick-list {
+  height: 100%;
+  width: 100%;
+  overflow: hidden !important;
+}
+
+.bentobox__uva-carousel-container .slick-track {
+  height: 100%;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+
+.bentobox__uva-carousel-container .slick-slide {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  opacity: 1 !important;
+  position: relative !important;
+  left: 0 !important;
+  top: 0 !important;
+  z-index: 1 !important;
+}
+
+.bentobox__uva-carousel-container .slick-active {
+  z-index: 2 !important;
+}
+
+.bentobox__uva-carousel-container .slick-slide > div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bentobox__uva-carousel-container .uvaexperience__card {
+  max-height: 220px;
+  width: 90%;
+  max-width: 150px;
+  margin: 0 auto;
+  transform: scale(0.85);
+  box-shadow: -1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.bentobox__uva-carousel-container .uvaexperience__card-pic {
+  height: 150px;
+  object-fit: cover;
+}
+
+.bentobox__uva-carousel-container .uvaexperience__card-blurb {
+  font-size: 0.8rem;
+  margin: 5px;
+  padding: 0;
+}
+
+.bentobox__uva-carousel-link {
+  height: 100%;
+  width: 100%;
+  display: block;
+}
