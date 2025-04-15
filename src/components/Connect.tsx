@@ -15,32 +15,36 @@ import {
   AiFillInstagram,
   AiFillMail,
 } from "react-icons/ai";
+import { FaMedium } from "react-icons/fa";
 
-const Contact = () => {
+const Connect = () => {
   return (
-    <div id="contact" className="contact">
-      <div className="contact-top">
-        <div className={`contact__title ${montserrat.className}`}>CONTACT</div>
-        <div className="contact__media-icons-container">
+    <div id="connect" className="connect">
+      <div className="connect-top">
+        <div className={`connect__title ${montserrat.className}`}>CONNECT</div>
+        <div className="connect__media-icons-container">
           <a href="https://github.com/Will-Butler" target="_blank">
-            <AiFillGithub className="contact__icon" />
+            <AiFillGithub className="connect__icon" />
           </a>
           <a href="https://www.instagram.com/gunthbutler/" target="_blank">
-            <AiFillInstagram className="contact__icon" />
+            <AiFillInstagram className="connect__icon" />
           </a>
           <a
             href="https://www.linkedin.com/in/will-butler-782242197/"
             target="_blank"
           >
-            <AiFillLinkedin className="contact__icon" />
+            <AiFillLinkedin className="connect__icon" />
           </a>
           <a href="mailto:will.butler24@gmail.com?Subject=Personal Website Inquiry">
-            <AiFillMail className="contact__icon" />
+            <AiFillMail className="connect__icon" />
+          </a>
+          <a href="https://medium.com/@will-butler" target="_blank">
+            <FaMedium className="connect__icon" />
           </a>
         </div>
       </div>
 
-      <div className="contact-bottom">
+      <div className="connect-bottom">
         <Image className="bentobox__bouncing-logo" src={eagles} alt="Eagles" />
         <Image
           className="bentobox__bouncing-logo"
@@ -89,4 +93,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default Connect;

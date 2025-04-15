@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { AiOutlineFileText } from "react-icons/ai";
 import { openSans, montserrat, playfairDisplay } from "../styles/fonts";
 import Image from "next/image";
-import { TfiNewWindow } from "react-icons/tfi";
 import mediumImage from "../../public/medium.png";
 
 const ArticlesCard: React.FC = () => {
@@ -27,8 +26,10 @@ const ArticlesCard: React.FC = () => {
           title="View Articles"
           alt="Click Here to View Articles"
         />
-        <div className="principles__new-tab-icon">
-          <TfiNewWindow />
+        <div className="bentobox__card-overlay">
+          <button className={`bentobox__view-button ${montserrat.className}`}>
+            View
+          </button>
         </div>
       </a>
     </div>

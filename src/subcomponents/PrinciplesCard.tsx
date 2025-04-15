@@ -1,10 +1,8 @@
 import React from "react";
 import { AiOutlineStar } from "react-icons/ai";
-import { openSans, montserrat, playfairDisplay } from "../styles/fonts";
-import { AiOutlineCheck } from "react-icons/ai";
+import { montserrat } from "../styles/fonts";
 import PrinciplesImage from "../../public/Principles.png";
 import Image from "next/image";
-import { TfiNewWindow } from "react-icons/tfi";
 
 const PrinciplesCard: React.FC = () => {
   return (
@@ -26,8 +24,10 @@ const PrinciplesCard: React.FC = () => {
           title="View Principles"
           alt="Click Here to View Principles"
         />
-        <div className="principles__new-tab-icon">
-          <TfiNewWindow />
+        <div className="bentobox__card-overlay">
+          <button className={`bentobox__view-button ${montserrat.className}`}>
+            View
+          </button>
         </div>
       </a>
     </div>

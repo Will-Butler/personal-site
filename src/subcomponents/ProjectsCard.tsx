@@ -1,9 +1,8 @@
-import React, { useState } from "react";
-import unifoundersLogo from "../../public/unifounders.png";
+import React from "react";
+import DesktopWorkspace from "../../public/DesktopWorkspace.png";
 import Image from "next/image";
 import { AiOutlineProject } from "react-icons/ai";
-import { TfiNewWindow } from "react-icons/tfi";
-import { openSans, montserrat, playfairDisplay } from "../styles/fonts";
+import { montserrat } from "../styles/fonts";
 import Link from "next/link";
 
 const ProjectsCard: React.FC = ({}) => {
@@ -18,12 +17,14 @@ const ProjectsCard: React.FC = ({}) => {
       <Link href="/ProjectsPage" className="bentobox__newtab-embed">
         <Image
           style={{ objectFit: "cover", height: "100%" }}
-          src={unifoundersLogo}
-          title="View UniFounders Site"
-          alt="Click Here to View UniFounders Site"
+          src={DesktopWorkspace}
+          title="View My Work"
+          alt="Click Here to View My Work"
         />
-        <div className="principles__new-tab-icon">
-          <TfiNewWindow />
+        <div className="bentobox__card-overlay">
+          <button className={`bentobox__view-button ${montserrat.className}`}>
+            View
+          </button>
         </div>
       </Link>
     </div>

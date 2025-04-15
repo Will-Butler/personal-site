@@ -1,13 +1,15 @@
 import Image from "next/image";
 import { Inter } from "next/font/google";
 import React, { useState, useEffect } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 import Home from "@/components/Home";
 import About from "@/components/About";
 import Experience from "@/components/Experience";
-import Contact from "@/components/Contact";
+import Connect from "@/components/Connect";
 import BentoBox from "@/components/BentoBox";
 import { AiFillDownSquare, AiFillUpSquare } from "react-icons/ai";
+import WBOutline from "../../public/WBOutline.png";
+import Link from "next/link";
 // import { IntersectionObserver } from
 
 //<Link to="/">Home</Link>
@@ -20,21 +22,21 @@ export default function App() {
   const about = "#about";
   const experience = "#experience";
   const bentobox = "#bentobox";
-  const contact = "#contact";
-  const sections = [home, about, experience, bentobox, contact];
+  const connect = "#connect";
+  const sections = [home, about, experience, bentobox, connect];
 
   const sectionIndexes: {
     home: number;
     about: number;
     experience: number;
     bentobox: number;
-    contact: number;
+    connect: number;
   } = {
     home: 0,
     about: 1,
     experience: 2,
     bentobox: 3,
-    contact: 4,
+    connect: 4,
   };
   const handleNextSectionNav = async () => {
     let nextSection = section == 4 ? 0 : (section % 4) + 1;
@@ -77,13 +79,22 @@ export default function App() {
       observer.observe(document.querySelector(about)!);
       observer.observe(document.querySelector(experience)!);
       observer.observe(document.querySelector(bentobox)!);
-      observer.observe(document.querySelector(contact)!);
+      observer.observe(document.querySelector(connect)!);
     }
-  }, [home, about, experience, bentobox, contact]);
+  }, [home, about, experience, bentobox, connect]);
 
   return (
     <Router>
       <div className="page-wrapper">
+        <Link href="#home" className="home-button">
+          <Image
+            src={WBOutline}
+            alt="Home"
+            className="home-button-image"
+            width={35}
+            height={35}
+          />
+        </Link>
         {/* <div className="floating-nav-container">
           <button onClick={()=>{handlePrevSectionNav()}}>
             <AiFillUpSquare className="floating-nav-button"/>
@@ -105,8 +116,8 @@ export default function App() {
           <li id="bentobox" className="slide">
             <BentoBox />
           </li>
-          <li id="contact" className="slide">
-            <Contact />
+          <li id="connect" className="slide">
+            <Connect />
           </li>
         </ul>
       </div>

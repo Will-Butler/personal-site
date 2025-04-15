@@ -5,11 +5,8 @@ import tundy from "../../public/tundyheadshot3.png";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import {
-  AiFillLeftSquare,
-  AiFillRightSquare,
-  AiOutlineRollback,
-} from "react-icons/ai";
+import { AiFillLeftSquare, AiFillRightSquare } from "react-icons/ai";
+import WBOutline from "../../public/WBOutline.png";
 import UVAExperienceContent from "@/text/UVAExperienceContent";
 import hoons from "../../public/hoons.jpeg";
 import VisasSolo from "../../public/VisasSolo.jpeg";
@@ -18,6 +15,7 @@ import p4p from "../../public/p4p.jpeg";
 import Beer5KSolo from "../../public/Beer5kGroupSitting.jpeg";
 import rugby from "../../public/rugby.jpeg";
 import paahaa from "../../public/paahaa.png";
+import Image from "next/image";
 
 interface UVAExperienceProps {
   picSize: string;
@@ -72,11 +70,15 @@ const UVAExperience: React.FC<UVAExperienceProps> = ({ picSize }) => {
 
   return (
     <div className="uvaexperience uvaexperience__gradient">
-      <div className="uvaexperience__return-container ">
-        <Link className="uvaexperience__return-icon" href="/">
-          <AiOutlineRollback className="uvaexperience__return-icon" />
-        </Link>
-      </div>
+      <Link className="home-button" href="/">
+        <Image
+          className="home-button-image"
+          src={WBOutline}
+          alt="WBOutline"
+          width={85}
+          height={85}
+        />
+      </Link>
       <div className="uvaexperience__carousel-container">
         <Slider ref={sliderRef} {...settings}>
           <UVAExperienceCard
