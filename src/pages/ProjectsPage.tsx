@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { montserrat, playfairDisplay, openSans } from "../styles/fonts";
 import UnifoundersImage from "../../public/unifounders.png";
-import VidInterviewerLogo from "/vidinterviewerlogo.png";
+import VidInterviewerLogo from "../../public/VidInterviewerLogo.png";
 import WBOutline from "../../public/WBOutline.png";
 import TIWWLogo from "../../public/TIWWLogoNoText.png";
 // Import other project images as needed
