@@ -97,25 +97,8 @@ li.slide {
   overflow: hidden;
   position: relative;
   min-height: 100vh;
-  /* min-width: 500px; */
+  background-color: white;
 }
-
-/* .home-first-name {
-  margin-top: var(--title-line-height);
-  margin-bottom: var(--title-line-height);
-  position: absolute;
-  font-size: 55vw;
-  color: transparent;
-  -webkit-text-stroke-width: 3px;
-  -webkit-text-stroke-color: black;
-  bottom: 5%;
-  left: 5%;
-  animation: first-name-animation 2s ease;
-}
-@keyframes first-name-animation {
-  0%{color: black}
-  100%{color: transparent}
-} */
 
 .home-first-name {
   margin-top: var(--title-line-height);
@@ -124,7 +107,9 @@ li.slide {
   font-size: 55vw;
   color: black;
   top: 5%;
-  left: 5%;
+  left: auto;
+  right: auto;
+  z-index: 3; /* Higher than bg-img but lower than bg-img-crop */
   /* margin: 0 auto; */
 }
 
@@ -135,13 +120,11 @@ li.slide {
   color: transparent;
   font-size: 35vw;
   bottom: 5%;
-  left: 5%;
-  right: 5%;
-  z-index: 1;
-  -webkit-text-stroke-width: 3px;
-  -webkit-text-stroke-color: white;
-  stroke-width: 3px;
-  animation: last-name-animation 2s ease 1s;
+  left: auto;
+  right: auto;
+  z-index: 5; /* Same as home-first-name */
+  color: white;
+  /* -webkit-text-stroke-color: white; */
 }
 
 @keyframes last-name-animation {
@@ -155,20 +138,22 @@ li.slide {
 
 .bg-img {
   position: absolute;
-  /* background-image: url('../../public/IndiaMountainFullBody.jpg'),
-  url('../../public/crop.png'); */
   min-height: 700px;
   max-height: 1000px;
-  z-index: -1;
+  z-index: 1; /* Behind text */
   object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 
 .bg-img-crop {
   position: absolute;
   min-height: 700px;
   max-height: 1000px;
-  z-index: 1;
+  z-index: 5; /* Above text */
   object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 
 .home-attribute-container {
@@ -178,6 +163,7 @@ li.slide {
   position: absolute;
   margin-top: 1vh;
   width: 100vw;
+  z-index: 3; /* Same as text */
 }
 
 .home-attribute-title {
@@ -1319,4 +1305,32 @@ li.slide {
   height: 100%;
   width: 100%;
   display: block;
+}
+
+/* Add these styles for the letter animations */
+#letter-w,
+#letter-i,
+#letter-l1,
+#letter-l2 {
+  display: inline-block;
+  opacity: 0; /* Start invisible and GSAP will control visibility */
+  transform-origin: center center;
+  position: relative;
+  z-index: 3; /* Same as other text */
+}
+
+/* Add a class for the initial white background that will be removed */
+.initial-white-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  z-index: 2; /* Behind everything */
+}
+
+/* Ensure the home page has a white background during animation */
+.home {
+  background-color: white;
 }
