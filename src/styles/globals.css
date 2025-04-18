@@ -8,6 +8,9 @@
   --background-end-rgb: 255, 255, 255;
   --title-line-height: calc(-0.6 * 0.5em);
   --uva-experience-carousel-height: 60%;
+  --light-blue: #e7feff;
+  --med-blue: #7b97ab;
+  --dark-blue: #4b6572;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -193,8 +196,6 @@ li.slide {
   min-height: 100vh;
   background-color: white;
   z-index: 1;
-  /* background: linear-gradient(320deg, darkblue 1%, rgb(58, 0, 58) 7%, white 30%) */
-  /* background: linear-gradient(0deg, darkblue 1%, rgb(58, 0, 58) 7%, white 20%, white 80%, rgb(58, 0, 58) 92%, darkblue 99%); */
 }
 
 .about__header-container {
@@ -288,15 +289,9 @@ li.slide {
   align-items: center;
   overflow: hidden;
   position: relative;
-  background: linear-gradient(
-    120deg,
-    darkblue,
-    rgb(58, 0, 58),
-    black 25%,
-    black
-  );
-  /* background: linear-gradient(0deg, darkblue, rgb(58, 0, 58), black 20%, black 80%, rgb(58, 0, 58), darkblue); */
+  background: black;
   min-height: 100vh;
+  position: relative;
 }
 
 .experience__title {
@@ -931,12 +926,14 @@ li.slide {
 .bentobox__bouncing-logo {
   width: 20vw;
   max-width: 150px;
-  z-index: -1;
+  z-index: 1;
   height: auto;
   position: absolute;
   opacity: 0.5;
   animation: moveX 10s linear 0s infinite alternate,
-    moveY 17s linear 0s infinite alternate;
+    moveY 8s ease-in-out 0s infinite alternate;
+  filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.3));
+  pointer-events: none;
 }
 @keyframes moveX {
   from {
@@ -948,11 +945,14 @@ li.slide {
 }
 
 @keyframes moveY {
-  from {
-    top: 55vh;
+  0% {
+    top: 0vh;
   }
-  to {
-    top: 85vh;
+  50% {
+    top: -15vh;
+  }
+  100% {
+    top: 15vh;
   }
 }
 
@@ -966,26 +966,39 @@ li.slide {
   position: relative;
   /* min-height: 100vh; */
   height: 100%;
-  overflow: scroll;
+  overflow: visible;
 }
+
 .connect-top {
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-start;
   align-items: center;
-  min-height: 50vh;
+  min-height: 40vh;
   height: 100%;
   width: 100%;
-  background: linear-gradient(180deg, darkblue, rgb(58, 0, 58), black 25%);
+  background: black;
   padding-bottom: 1vh;
+  position: relative;
+  z-index: 1;
 }
+
 .connect-bottom {
-  min-height: 50vh;
+  min-height: 30vh;
   height: 100%;
   width: 100%;
-  /* background: white; */
-  background: linear-gradient(180deg, black 5%, white 95%);
-  z-index: -1;
+  background: linear-gradient(
+    180deg,
+    black 0%,
+    rgba(0, 0, 0, 0.8) 15%,
+    rgba(0, 0, 0, 0.5) 30%,
+    rgba(255, 255, 255, 0.7) 78%,
+    white 100%
+  );
+  z-index: 0;
+  position: relative;
+  padding-top: 5vh;
+  padding-bottom: 10vh;
 }
 
 .connect__title {
@@ -1000,28 +1013,29 @@ li.slide {
   justify-content: center;
   align-items: center;
   width: 100%;
-  margin: 2vh 2vw;
+  margin: 4vh 2vw 8vh 2vw;
+  position: relative;
+  z-index: 2;
 }
 
 .connect__icon {
   width: 16vw;
-  /* min-width: 180px; */
   max-width: 200px;
   height: auto;
   color: black;
   background-color: white;
   border-radius: 20px;
   margin: 0 2vw;
-  transition: background-color 0.5s ease-in;
-  transition: color 0.5s ease-in;
-  transition: rotate 0.5s ease;
+  transition: all 0.5s ease-in;
+  position: relative;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
 }
 
 .connect__icon:hover {
   background-color: black;
   color: white;
-  /* width: 6vw; */
   rotate: 360deg;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
 }
 
 /* Add these styles to your globals.css */
@@ -1333,4 +1347,95 @@ li.slide {
 /* Ensure the home page has a white background during animation */
 .home {
   background-color: white;
+}
+
+/* Add this to your globals.css file */
+#about {
+  position: relative;
+  z-index: 10; /* Higher than the bg-img-crop */
+}
+
+/* Add these new styles for the spotty background */
+.spotty-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.spotty-background::before,
+.spotty-background::after {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--light-blue) 0%, transparent 70%);
+  opacity: 0.3;
+  z-index: -1;
+}
+
+.spotty-background::before {
+  top: 10%;
+  left: 15%;
+}
+
+.spotty-background::after {
+  bottom: 20%;
+  right: 10%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, var(--med-blue) 0%, transparent 70%);
+}
+
+.spot {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.2;
+  z-index: -1;
+}
+
+.spot-1 {
+  top: 30%;
+  left: 60%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, var(--dark-blue) 0%, transparent 70%);
+}
+
+.spot-2 {
+  top: 30%;
+  left: 30%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, white 0%, transparent 70%);
+  opacity: 0.3;
+}
+
+.spot-3 {
+  top: 15%;
+  right: 25%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, var(--med-blue) 0%, transparent 70%);
+}
+
+.spot-4 {
+  bottom: 10%;
+  left: 70%;
+  width: 280px;
+  height: 280px;
+  background: radial-gradient(circle, var(--light-blue) 0%, transparent 70%);
+}
+
+.spot-5 {
+  top: 40%;
+  left: 5%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, white 0%, transparent 70%);
+  opacity: 0.4;
 }

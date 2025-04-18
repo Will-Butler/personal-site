@@ -35,8 +35,16 @@ const Experience = () => {
     });
     return () => ctx.revert();
   }, []);
+
   return (
     <div id="experience" className="experience">
+      <div className="spotty-background">
+        <div className="spot spot-1"></div>
+        <div className="spot spot-2"></div>
+        <div className="spot spot-3"></div>
+        <div className="spot spot-4"></div>
+        <div className="spot spot-5"></div>
+      </div>
       <div className={`experience__title ${montserrat.className}`}>
         EXPERIENCE
       </div>

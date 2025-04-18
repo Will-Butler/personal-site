@@ -168,7 +168,7 @@ const Home = () => {
       ScrollTrigger.create({
         trigger: "#background",
         start: "top top",
-        end: "+=50px",
+        end: "+=400px",
         scrub: true,
         pin: true,
         pinSpacing: false,
@@ -177,10 +177,18 @@ const Home = () => {
       ScrollTrigger.create({
         trigger: "#background2",
         start: "top top",
-        end: "+=50px",
+        end: "+=400px",
         scrub: true,
         pin: true,
         pinSpacing: false,
+        onEnter: () => {
+          // Ensure the About section is above the pinned images
+          gsap.set("#about", { zIndex: 10 });
+        },
+        onLeaveBack: () => {
+          // Reset z-index when scrolling back up
+          gsap.set("#about", { zIndex: "auto" });
+        },
       });
     }, homeRef);
 
