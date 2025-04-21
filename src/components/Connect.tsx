@@ -9,6 +9,7 @@ import uva from "../../public/uva.png";
 import rhcp from "../../public/rhcp.png";
 import strokes from "../../public/strokes.png";
 import taiwan from "../../public/taiwan.png";
+import unc from "../../public/UNCLogo.png";
 import {
   AiFillGithub,
   AiFillLinkedin,
@@ -94,6 +95,12 @@ const Connect = () => {
           src={taiwan}
           alt="Taiwan"
           style={{ animationDelay: "-49s" }}
+        />
+        <Image
+          className="bentobox__bouncing-logo"
+          src={unc}
+          alt="UNC"
+          style={{ animationDelay: "-18s" }}
         />
       </div>
     </div>
