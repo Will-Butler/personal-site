@@ -41,7 +41,7 @@ const Home = () => {
         autoAlpha: 1,
       });
       gsap.set("#letter-l1", { y: "-80vh", autoAlpha: 1 });
-      gsap.set("#letter-l2", { x: "50vw", autoAlpha: 1, rotate: -35 });
+      gsap.set("#letter-l2", { x: "50vw", autoAlpha: 1, rotate: -30 });
 
       // Create animation timeline
       const tl = gsap.timeline({
@@ -61,43 +61,51 @@ const Home = () => {
           x: 0,
           y: 0,
           rotation: 0,
-          duration: 1.2,
+          duration: 0.8,
           ease: "power2.out",
         },
-        "-=0.4"
+        "-=0.7"
       );
 
       tl.to(
         "#letter-l1",
         {
           y: 0,
-          duration: 0.2,
+          duration: 0.5,
           ease: "bounce.out",
         },
-        "-=0.1"
+        "-=.8"
       );
 
       // First l wobble
-      tl.to("#letter-l1", {
-        rotation: -10,
-        duration: 0.2,
-        ease: "power1.inOut",
-      });
-      tl.to("#letter-l1", {
-        rotation: 14,
-        duration: 0.3,
-        ease: "power1.inOut",
-      });
-      tl.to("#letter-l1", {
-        rotation: -6,
-        duration: 0.5,
-        ease: "power1.inOut",
-      });
-      tl.to("#letter-l1", {
-        rotation: 18,
-        duration: 0.6,
-        ease: "power1.inOut",
-      });
+      tl.to(
+        "#letter-l1",
+        {
+          rotation: -30,
+          duration: 0.4,
+          ease: "power2.in",
+        },
+        "-=.6"
+      );
+      tl.to(
+        "#letter-l1",
+        {
+          rotation: 14,
+          duration: 0.5,
+          ease: "power2.out",
+        },
+        "-=.2"
+      );
+
+      // tl.to(
+      //   "#letter-l1",
+      //   {
+      //     rotation: 18,
+      //     duration: 0.4,
+      //     ease: "power1.inOut",
+      //   },
+      //   "-=.6"
+      // );
 
       // Second l slides in
       tl.to(
@@ -115,7 +123,7 @@ const Home = () => {
         "#letter-l1",
         {
           rotation: 0,
-          duration: 0.3,
+          duration: 0.5,
           ease: "elastic.out(1, 0.3)",
         },
         "-=0.3"
@@ -134,7 +142,7 @@ const Home = () => {
           duration: 1,
           stagger: 0.1,
         },
-        "+=0.3"
+        "+=0.4"
       );
 
       tl.to(
@@ -144,7 +152,7 @@ const Home = () => {
           duration: 1.2,
           ease: "elastic.out(1, 0.3)",
         },
-        "-=1.4"
+        "-=1.8"
       );
 
       // Move white background behind everything and fade it out

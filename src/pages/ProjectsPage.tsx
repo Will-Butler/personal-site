@@ -28,7 +28,7 @@ const projects: ProjectCard[] = [
   {
     title: "VidInterviewer",
     description:
-      "A SAAS that conducts its own interviews, allowing interviewers to review candidates on their own time.",
+      "A SAAS that conducts its own interviews for employers, allowing them to review candidates on their own time.",
     image: VidInterviewerLogo,
     link: "https://vidinterviewer.com",
     technologies: ["React", "Node.js", "Firebase", "Express", "TailwindCSS"],
@@ -47,6 +47,13 @@ const projects: ProjectCard[] = [
 const ProjectsPage: React.FC = () => {
   return (
     <div className="projectspage projectspage__gradient">
+      <div className="spotty-background">
+        <div className="spot spot-1"></div>
+        <div className="spot spot-2"></div>
+        <div className="spot spot-3"></div>
+        <div className="spot spot-4"></div>
+        <div className="spot spot-5"></div>
+      </div>
       <Link className="home-button" href="/">
         <Image
           className="home-button-image"
