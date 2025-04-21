@@ -6,6 +6,7 @@ import UnifoundersImage from "../../public/unifounders.png";
 import VidInterviewerLogo from "../../public/VidInterviewerLogo.png";
 import WBOutline from "../../public/WBOutline.png";
 import TIWWLogo from "../../public/TIWWLogoNoText.png";
+import NavButton from "@/subcomponents/NavButton";
 // Import other project images as needed
 
 interface ProjectCard {
@@ -54,20 +55,14 @@ const ProjectsPage: React.FC = () => {
         <div className="spot spot-4"></div>
         <div className="spot spot-5"></div>
       </div>
-      <Link className="home-button" href="/">
-        <Image
-          className="home-button-image"
-          src={WBOutline}
-          alt="WBOutline"
-          width={85}
-          height={85}
-        />
-      </Link>
+      <NavButton />
 
       <h1 className={`projectspage__title ${montserrat.className}`}>My Work</h1>
-      <p className={`projectspage__subtitle ${openSans.className}`}>
-        A collection of my recent projects and collaborations
-      </p>
+      <div className="projectspage__subtitle-container">
+        <p className={`projectspage__subtitle-mask ${openSans.className}`}>
+          A collection of my recent projects and collaborations
+        </p>
+      </div>
 
       <div className="projectspage__grid">
         {projects.map((project, index) => (
@@ -113,7 +108,7 @@ const ProjectsPage: React.FC = () => {
                   rel="noopener noreferrer"
                   className="projectspage__card-button"
                 >
-                  View Project
+                  View
                 </a>
               </div>
             </div>

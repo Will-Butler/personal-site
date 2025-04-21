@@ -16,6 +16,7 @@ import Beer5KSolo from "../../public/Beer5kGroupSitting.jpeg";
 import rugby from "../../public/rugby.jpeg";
 import paahaa from "../../public/paahaa.png";
 import Image from "next/image";
+import NavButton from "@/subcomponents/NavButton";
 
 interface UVAExperienceProps {
   picSize: string;
@@ -70,15 +71,7 @@ const UVAExperience: React.FC<UVAExperienceProps> = ({ picSize }) => {
 
   return (
     <div className="uvaexperience uvaexperience__gradient">
-      <Link className="home-button" href="/">
-        <Image
-          className="home-button-image"
-          src={WBOutline}
-          alt="WBOutline"
-          width={85}
-          height={85}
-        />
-      </Link>
+      <NavButton />
       <div className="uvaexperience__carousel-container">
         <Slider ref={sliderRef} {...settings}>
           <UVAExperienceCard

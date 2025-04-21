@@ -31,32 +31,6 @@ body {
   min-height: 100%;
 }
 
-.floating-nav-container {
-  position: fixed;
-  right: 1%;
-  top: 5%;
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 10;
-}
-
-.floating-nav-button {
-  position: relative;
-  margin: 1vh;
-  opacity: 0.6;
-  color: gray;
-  font-size: 50px;
-  transition: all 1s ease 0;
-  z-index: 10;
-}
-
-.floating-nav-button:hover {
-  opacity: 0.9;
-  cursor: pointer;
-}
-
 .home-button {
   position: fixed;
   top: 20px;
@@ -64,20 +38,23 @@ body {
   z-index: 20;
   width: 95px;
   height: 95px;
-  /* opacity: 0.8; */
   transition: all 0.5s ease 0s;
-  border-radius: 50%;
-  /* background-color: rgba(255, 255, 255); */
+  border-radius: 50px;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
+  justify-content: flex-start;
+  padding-top: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  overflow: visible;
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 .home-button:hover {
-  opacity: 1;
-  transform: scale(1.1);
+  height: 330px;
+  background-color: rgba(255, 255, 255, 0.9);
   cursor: pointer;
+  border-radius: 50px;
 }
 
 .home-button-image {
@@ -85,6 +62,46 @@ body {
   height: 85px;
   object-fit: contain;
   z-index: 10;
+}
+
+.home-button-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  transition-delay: 0s;
+  pointer-events: none;
+  position: absolute;
+  top: 100px;
+}
+
+.home-button:hover .home-button-nav {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.1s;
+  pointer-events: auto;
+}
+
+.home-button-nav-link {
+  padding: 8px 0;
+  width: 80%;
+  text-align: center;
+  color: #333;
+  font-weight: 500;
+  font-size: 0.9rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.home-button-nav-link:hover {
+  color: var(--dark-blue);
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.home-button-nav-link:not(:last-child) {
+  margin-bottom: 2px;
 }
 
 ul.slides {
@@ -296,8 +313,8 @@ li.slide {
     120deg,
     var(--dark-blue),
     var(--med-blue),
-    var(--light-blue) 20%,
-    black 15%
+    var(--light-blue) 20vw,
+    black 15vw
   );
   min-height: 100vh;
   position: relative;
@@ -996,8 +1013,8 @@ li.slide {
     120deg,
     var(--dark-blue),
     var(--med-blue),
-    var(--light-blue) 20%,
-    black 15%
+    var(--light-blue) 20vw,
+    black 15vw
   );
   padding-bottom: 1vh;
   position: relative;
@@ -1076,9 +1093,9 @@ li.slide {
   background: linear-gradient(
     120deg,
     var(--dark-blue),
-    var(--med-blue),
-    var(--light-blue) 20%,
-    black 15%
+    var(--med-blue) 12vw,
+    var(--light-blue) 20vw,
+    black 15vw
   );
 }
 
@@ -1464,4 +1481,44 @@ li.slide {
   height: 400px;
   background: radial-gradient(circle, white 0%, transparent 70%);
   opacity: 0.4;
+}
+
+/* Update these styles for the subtitle mask effect to match page gradient */
+.projectspage__subtitle-container {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 2rem;
+  z-index: 1;
+}
+
+.projectspage__subtitle-mask {
+  position: relative;
+  display: inline-block;
+  font-size: 1.3rem;
+  color: transparent;
+  /* Use a fixed position background that matches the page gradient */
+  background: linear-gradient(
+    120deg,
+    black 0%,
+    black 15vw,
+    white 15vw,
+    white 100%
+  );
+  background-attachment: fixed; /* This is the key property */
+  background-position: top left;
+  background-size: 100% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  margin: 0;
+  padding: 0.5rem 1rem;
+  font-weight: 500;
+  max-width: 800px;
+}
+
+/* Adjust for mobile screens */
+@media (max-width: 768px) {
+  .projectspage__subtitle-mask {
+    font-size: 1.1rem;
+  }
 }
