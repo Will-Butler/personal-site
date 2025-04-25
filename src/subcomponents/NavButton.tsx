@@ -1,12 +1,26 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { useRouter } from "next/router";
 import WBOutline from "../../public/WBOutline.png";
 import { openSans } from "@/styles/fonts";
 
 const NavButton = () => {
+  const router = useRouter();
+  const [isMainPage, setIsMainPage] = useState(true);
+
+  useEffect(() => {
+    // Check if we're on the main page or a subpage
+    setIsMainPage(router.pathname === "/" || router.pathname === "/#home");
+  }, [router.pathname]);
+
+  // Determine the correct link format based on current page
+  const getLink = (anchor: string) => {
+    return isMainPage ? anchor : `/${anchor}`;
+  };
+
   return (
-    <Link href="#home" className="home-button">
+    <Link href={isMainPage ? "#home" : "/"} className="home-button">
       <Image
         src={WBOutline}
         alt="Home"
@@ -16,31 +30,31 @@ const NavButton = () => {
       />
       <div className="home-button-nav">
         <Link
-          href="#home"
+          href={getLink("#home")}
           className={`home-button-nav-link ${openSans.className}`}
         >
           Home
         </Link>
         <Link
-          href="#about"
+          href={getLink("#about")}
           className={`home-button-nav-link ${openSans.className}`}
         >
           About
         </Link>
         <Link
-          href="#experience"
+          href={getLink("#experience")}
           className={`home-button-nav-link ${openSans.className}`}
         >
           Experience
         </Link>
         <Link
-          href="#bentobox"
+          href={getLink("#bentobox")}
           className={`home-button-nav-link ${openSans.className}`}
         >
           Showcase
         </Link>
         <Link
-          href="#connect"
+          href={getLink("#connect")}
           className={`home-button-nav-link ${openSans.className}`}
         >
           Connect
