@@ -56,9 +56,7 @@ export const aboutSections = {
   ),
   SECTION3: (
     <>
-      I am currently working on a focused on connecting university student
-      founders with alumni. If you have any questions or just want to chat, do
-      not hesitate to{" "}
+      If you have any questions or just want to chat, do not hesitate to{" "}
       <a
         className="experience__uva-xp-link"
         href="#connect"
