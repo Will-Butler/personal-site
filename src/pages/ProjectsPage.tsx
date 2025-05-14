@@ -23,16 +23,23 @@ const projects: ProjectCard[] = [
     description:
       "A platform that connects university entrepreneurs and alumni, fostering innovation throughout campuses.",
     image: UnifoundersImage,
-    link: "https://unifounders.onrender.com",
+    link: "https://uni-founders.com",
     technologies: ["React", "Rails", "Supabase", "SCSS", "Bootstrap", "Figma"],
   },
   {
     title: "VidInterviewer",
     description:
-      "A SAAS that conducts its own interviews for employers, allowing them to review candidates on their own time.",
+      "A SaaS that conducts its own interviews for employers, allowing them to review candidates on their own time.",
     image: VidInterviewerLogo,
     link: "https://vidinterviewer.com",
-    technologies: ["React", "Node.js", "Firebase", "Express", "TailwindCSS"],
+    technologies: [
+      "React",
+      "Node.js",
+      "Firebase Cloud Functions",
+      "Firestore",
+      "Express",
+      "TailwindCSS",
+    ],
   },
   {
     title: "Take It Worldwide",
