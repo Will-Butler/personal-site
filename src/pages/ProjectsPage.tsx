@@ -32,14 +32,7 @@ const projects: ProjectCard[] = [
       "A SaaS that conducts its own interviews for employers, allowing them to review candidates on their own time.",
     image: VidInterviewerLogo,
     link: "https://vidinterviewer.com",
-    technologies: [
-      "React",
-      "Node.js",
-      "Firebase Cloud Functions",
-      "Firestore",
-      "Express",
-      "TailwindCSS",
-    ],
+    technologies: ["React", "Firebase Cloud Functions", "Firestore", "Express"],
   },
   {
     title: "Take It Worldwide",
@@ -47,7 +40,7 @@ const projects: ProjectCard[] = [
       "A tech-savvy trip-planning service that thoughtfully designs highly personalized travel experiences.",
     image: TIWWLogo,
     link: "https://takeitworldwide.com",
-    technologies: ["React"],
+    technologies: ["React", "TailwindCSS", "Node.js"],
   },
   // Add more projects here
 ];
