@@ -1,11 +1,9 @@
 import React from "react";
-import Link from "next/link";
 import Image from "next/image";
-import { montserrat, playfairDisplay, openSans } from "../styles/fonts";
-import UnifoundersImage from "../../public/unifounders.png";
+import { montserrat, openSans } from "../styles/fonts";
+import UnifoundersImage from "../../public/UniFounders-Logo2.png";
 import VidInterviewerLogo from "../../public/VidInterviewerLogo.png";
-import WBOutline from "../../public/WBOutline.png";
-import TIWWLogo from "../../public/TIWWLogoNoText.png";
+import TIWWLogo from "../../public/TIWWLogo.png";
 import NavButton from "@/subcomponents/NavButton";
 // Import other project images as needed
 
