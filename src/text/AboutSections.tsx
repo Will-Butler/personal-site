@@ -39,7 +39,7 @@ export const aboutSections = {
         href="https://medium.com/@willbutler"
         target="_blank"
       >
-        40+ articles
+        45+ articles
       </a>
       , ran countless miles, completed one{" "}
       <a
@@ -49,7 +49,7 @@ export const aboutSections = {
       >
         10-day silence retreat
       </a>
-      , written/produced 6 songs, visited 35 countries, eaten every food
+      , written/produced 6 songs, visited 40 countries, eaten every food
       possible, helped 100+ travelers learn to surf (in two languages!), and
       have been asked how tall I am 384 times.
     </>

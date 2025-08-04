@@ -318,6 +318,7 @@ li.slide {
   );
   min-height: 100vh;
   position: relative;
+  z-index: 1;
 }
 
 .experience__title {
@@ -483,6 +484,7 @@ li.slide {
   flex-flow: row wrap;
   align-items: center;
   justify-content: center;
+  z-index: 1;
 }
 
 .experience__resume-link:hover {
