@@ -1,4 +1,5 @@
 import React from "react";
+import Head from "next/head";
 import Image from "next/image";
 import { montserrat, openSans } from "../styles/fonts";
 import UnifoundersImage from "../../public/UniFounders-Logo2.png";
@@ -45,75 +46,83 @@ const projects: ProjectCard[] = [
 
 const ProjectsPage: React.FC = () => {
   return (
-    <div className="projectspage projectspage__gradient">
-      <div className="spotty-background">
-        <div className="spot spot-1"></div>
-        <div className="spot spot-2"></div>
-        <div className="spot spot-3"></div>
-        <div className="spot spot-4"></div>
-        <div className="spot spot-5"></div>
-      </div>
-      <NavButton />
+    <>
+      <Head>
+        <link rel="canonical" href="https://will-butler.com/ProjectsPage" />
+        <meta name="robots" content="index,follow" />
+      </Head>
+      <div className="projectspage projectspage__gradient">
+        <div className="spotty-background">
+          <div className="spot spot-1"></div>
+          <div className="spot spot-2"></div>
+          <div className="spot spot-3"></div>
+          <div className="spot spot-4"></div>
+          <div className="spot spot-5"></div>
+        </div>
+        <NavButton />
 
-      <h1 className={`projectspage__title ${montserrat.className}`}>My Work</h1>
-      <div className="projectspage__subtitle-container">
-        <p className={`projectspage__subtitle-mask ${openSans.className}`}>
-          A collection of my recent projects and collaborations
-        </p>
-      </div>
+        <h1 className={`projectspage__title ${montserrat.className}`}>
+          My Work
+        </h1>
+        <div className="projectspage__subtitle-container">
+          <p className={`projectspage__subtitle-mask ${openSans.className}`}>
+            A collection of my recent projects and collaborations
+          </p>
+        </div>
 
-      <div className="projectspage__grid">
-        {projects.map((project, index) => (
-          <div key={index} className="projectspage__card">
-            <div className="projectspage__card-image-container">
-              <Image
-                src={project.image}
-                alt={project.title}
-                className="projectspage__card-image"
-                quality={100}
-                fill
-              />
-              <div className="projectspage__card-image-gradient"></div>
-            </div>
-
-            <div className="projectspage__card-overlay">
-              {/* <div className="projectspage__card-image-gradient"></div> */}
-              <div className="projectspage__card-basic-info">
-                <h2
-                  className={`projectspage__card-title ${montserrat.className}`}
-                >
-                  {project.title}
-                </h2>
-                <p
-                  className={`projectspage__card-description ${openSans.className}`}
-                >
-                  {project.description}
-                </p>
+        <div className="projectspage__grid">
+          {projects.map((project, index) => (
+            <div key={index} className="projectspage__card">
+              <div className="projectspage__card-image-container">
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  className="projectspage__card-image"
+                  quality={100}
+                  fill
+                />
+                <div className="projectspage__card-image-gradient"></div>
               </div>
 
-              <div className="projectspage__card-expanded-content">
-                <div className="projectspage__card-technologies">
-                  {project.technologies.map((tech, i) => (
-                    <span key={i} className="projectspage__tech-tag">
-                      {tech}
-                    </span>
-                  ))}
+              <div className="projectspage__card-overlay">
+                {/* <div className="projectspage__card-image-gradient"></div> */}
+                <div className="projectspage__card-basic-info">
+                  <h2
+                    className={`projectspage__card-title ${montserrat.className}`}
+                  >
+                    {project.title}
+                  </h2>
+                  <p
+                    className={`projectspage__card-description ${openSans.className}`}
+                  >
+                    {project.description}
+                  </p>
                 </div>
 
-                <a
-                  href={project.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="projectspage__card-button"
-                >
-                  View
-                </a>
+                <div className="projectspage__card-expanded-content">
+                  <div className="projectspage__card-technologies">
+                    {project.technologies.map((tech, i) => (
+                      <span key={i} className="projectspage__tech-tag">
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="projectspage__card-button"
+                  >
+                    View
+                  </a>
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

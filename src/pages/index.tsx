@@ -1,4 +1,5 @@
 import { Inter } from "next/font/google";
+import Head from "next/head";
 import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 import Home from "@/components/Home";
@@ -61,6 +62,10 @@ export default function App() {
 
   return (
     <Router>
+      <Head>
+        <link rel="canonical" href="https://will-butler.com/" />
+        <meta name="robots" content="index,follow" />
+      </Head>
       <div className="page-wrapper">
         <NavButton />
         <ul id="slides" className="slides">

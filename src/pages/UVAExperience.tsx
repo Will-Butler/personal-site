@@ -1,4 +1,5 @@
 import React, { useRef } from "react";
+import Head from "next/head";
 import Link from "next/link";
 import UVAExperienceCard from "../subcomponents/UVAExperienceCard";
 import tundy from "../../public/tundyheadshot3.png";
@@ -70,63 +71,69 @@ const UVAExperience: React.FC<UVAExperienceProps> = ({ picSize }) => {
   };
 
   return (
-    <div className="uvaexperience uvaexperience__gradient">
-      <NavButton />
-      <div className="uvaexperience__carousel-container">
-        <Slider ref={sliderRef} {...settings}>
-          <UVAExperienceCard
-            blurb={UVAExperienceContent["HOONS_BLURB"]}
-            paragraph="this is paragraph"
-            pic={hoons}
-            picSize={picSize}
-          />
-          <UVAExperienceCard
-            blurb={UVAExperienceContent["RUGBY_BLURB"]}
-            paragraph="this is paragraph"
-            pic={rugby}
-            picSize={picSize}
-          />
-          <UVAExperienceCard
-            blurb={UVAExperienceContent["RANCH_BLURB"]}
-            paragraph="this is paragraph"
-            pic={paahaa}
-            picSize={picSize}
-          />
-          <UVAExperienceCard
-            blurb={UVAExperienceContent["P4P_BLURB"]}
-            paragraph="this is paragraph"
-            pic={p4p}
-            picSize={picSize}
-          />
-          <UVAExperienceCard
-            blurb={UVAExperienceContent["BEER5K_BLURB"]}
-            paragraph="this is paragraph"
-            pic={Beer5KSolo}
-            picSize={picSize}
-          />
-          <UVAExperienceCard
-            blurb={UVAExperienceContent["VISAS_BLURB"]}
-            paragraph="this is paragraph"
-            pic={VisasSolo}
-            picSize={picSize}
-          />
-          <UVAExperienceCard
-            blurb={UVAExperienceContent["MAHJONG_BLURB"]}
-            paragraph="this is paragraph"
-            pic={MahjongSolo}
-            picSize={picSize}
-          />
-        </Slider>
-        <div className="uvaexperience__carousel-arrow-wrapper">
-          <button className="button" onClick={previous}>
-            <AiFillLeftSquare className="uvaexperience__carousel-arrow" />
-          </button>
-          <button className="button" onClick={next}>
-            <AiFillRightSquare className="uvaexperience__carousel-arrow" />
-          </button>
+    <>
+      <Head>
+        <link rel="canonical" href="https://will-butler.com/UVAExperience" />
+        <meta name="robots" content="index,follow" />
+      </Head>
+      <div className="uvaexperience uvaexperience__gradient">
+        <NavButton />
+        <div className="uvaexperience__carousel-container">
+          <Slider ref={sliderRef} {...settings}>
+            <UVAExperienceCard
+              blurb={UVAExperienceContent["HOONS_BLURB"]}
+              paragraph="this is paragraph"
+              pic={hoons}
+              picSize={picSize}
+            />
+            <UVAExperienceCard
+              blurb={UVAExperienceContent["RUGBY_BLURB"]}
+              paragraph="this is paragraph"
+              pic={rugby}
+              picSize={picSize}
+            />
+            <UVAExperienceCard
+              blurb={UVAExperienceContent["RANCH_BLURB"]}
+              paragraph="this is paragraph"
+              pic={paahaa}
+              picSize={picSize}
+            />
+            <UVAExperienceCard
+              blurb={UVAExperienceContent["P4P_BLURB"]}
+              paragraph="this is paragraph"
+              pic={p4p}
+              picSize={picSize}
+            />
+            <UVAExperienceCard
+              blurb={UVAExperienceContent["BEER5K_BLURB"]}
+              paragraph="this is paragraph"
+              pic={Beer5KSolo}
+              picSize={picSize}
+            />
+            <UVAExperienceCard
+              blurb={UVAExperienceContent["VISAS_BLURB"]}
+              paragraph="this is paragraph"
+              pic={VisasSolo}
+              picSize={picSize}
+            />
+            <UVAExperienceCard
+              blurb={UVAExperienceContent["MAHJONG_BLURB"]}
+              paragraph="this is paragraph"
+              pic={MahjongSolo}
+              picSize={picSize}
+            />
+          </Slider>
+          <div className="uvaexperience__carousel-arrow-wrapper">
+            <button className="button" onClick={previous}>
+              <AiFillLeftSquare className="uvaexperience__carousel-arrow" />
+            </button>
+            <button className="button" onClick={next}>
+              <AiFillRightSquare className="uvaexperience__carousel-arrow" />
+            </button>
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
