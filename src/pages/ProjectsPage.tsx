@@ -5,6 +5,7 @@ import { montserrat, openSans } from "../styles/fonts";
 import UnifoundersImage from "../../public/UniFounders-Logo2.png";
 import VidInterviewerLogo from "../../public/VidInterviewerLogo.png";
 import TIWWLogo from "../../public/TIWWLogo.png";
+import SecondWindLogo from "../../public/SecondWindLogo.png";
 import NavButton from "@/subcomponents/NavButton";
 // Import other project images as needed
 
@@ -41,7 +42,14 @@ const projects: ProjectCard[] = [
     link: "https://takeitworldwide.com",
     technologies: ["React", "TailwindCSS", "Node.js"],
   },
-  // Add more projects here
+  {
+    title: "2ndWind",
+    description:
+      "An NGO that bridges the gap between short-term and long-term disaster relief efforts.",
+    image: SecondWindLogo,
+    link: "https://v0-non-profit-website-design-qj8wgfm13-will-butlers-projects.vercel.app/",
+    technologies: ["v0", "Next.js", "Adobe InDesign", "ClickUp"],
+  },
 ];
 
 const ProjectsPage: React.FC = () => {
