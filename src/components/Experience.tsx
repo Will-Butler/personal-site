@@ -5,7 +5,7 @@ import nasa from "../../public/nasa.png";
 import amazon from "../../public/amazon.png";
 import uva from "../../public/uva.png";
 import taiwan from "../../public/taiwan.png";
-import unifounders from "../../public/unifounders.png";
+import unifounders from "../../public/UnifoundersLogo.png";
 import unc from "../../public/UNCLogo.png";
 import { experienceBullets } from "../text/ExperienceBullets";
 import gsap from "gsap";

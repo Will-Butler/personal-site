@@ -2,7 +2,7 @@ import React from "react";
 import Head from "next/head";
 import Image from "next/image";
 import { montserrat, openSans } from "../styles/fonts";
-import UnifoundersImage from "../../public/UniFounders-Logo2.png";
+import UnifoundersImage from "../../public/UnifoundersLogo.png";
 import VidInterviewerLogo from "../../public/VidInterviewerLogo.png";
 import TIWWLogo from "../../public/TIWWLogo.png";
 import SecondWindLogo from "../../public/SecondWindLogo.png";
@@ -47,7 +47,7 @@ const projects: ProjectCard[] = [
     description:
       "An NGO that bridges the gap between short-term and long-term disaster relief efforts.",
     image: SecondWindLogo,
-    link: "https://v0-non-profit-website-design-qj8wgfm13-will-butlers-projects.vercel.app/",
+    link: "https://2ndwindrelief.com/",
     technologies: ["v0", "Next.js", "Adobe InDesign", "ClickUp"],
   },
 ];
