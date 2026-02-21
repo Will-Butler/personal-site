@@ -128,7 +128,7 @@ const Experience = () => {
         />
         <a
           className={`experience__resume-link ${montserrat.className}`}
-          href="/Resume8.25.pdf"
+          href="/Resume.pdf"
           target="_blank"
         >
           <span>
