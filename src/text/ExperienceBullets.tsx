@@ -6,7 +6,9 @@ export const experienceBullets = {
   UNC_BULLET1:
     "Masters in Business Administration | Peter G.C. Mallinson Full-Tuition Fellowship Recipient | Class of 2027",
   UNC_BULLET2:
-    "I'm still getting my feet wet here, but I'm excited to see where this path takes me!",
+    "Concentrations: Entrepreneurship; Technology Innovation and Product Management",
+    UNC_BULLET3:
+    "President, Entrepreneurship and Venture Capital Club | VP of Operations, Sports and Entertainment Business Club",
   UNIFOUNDERS_BULLET1: (
     <>
       Individually design, develop, and maintain{" "}

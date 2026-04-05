@@ -60,6 +60,7 @@ const Experience = () => {
           content={[
             experienceBullets["UNC_BULLET1"],
             experienceBullets["UNC_BULLET2"],
+            experienceBullets["UNC_BULLET3"],
           ]}
         />
         <ExperienceCard
@@ -128,7 +129,7 @@ const Experience = () => {
         />
         <a
           className={`experience__resume-link ${montserrat.className}`}
-          href="/Resume.pdf"
+          href="/WilliamButlerResume.pdf"
           target="_blank"
         >
           <span>
