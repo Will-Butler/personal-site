@@ -5,7 +5,7 @@ import { montserrat, openSans } from "../styles/fonts";
 import UnifoundersImage from "../../public/UnifoundersLogo.png";
 import VidInterviewerLogo from "../../public/VidInterviewerLogo.png";
 import TIWWLogo from "../../public/TIWWLogo.png";
-import SecondWindLogo from "../../public/SecondWindLogo.png";
+import REGNLogo from "../../public/regn.png";
 import NavButton from "@/subcomponents/NavButton";
 // Import other project images as needed
 
@@ -43,11 +43,11 @@ const projects: ProjectCard[] = [
     technologies: ["React", "TailwindCSS", "Node.js"],
   },
   {
-    title: "2ndWind",
+    title: "REGN",
     description:
       "An NGO that bridges the gap between short-term and long-term disaster relief efforts.",
-    image: SecondWindLogo,
-    link: "https://2ndwindrelief.com/",
+    image: REGNLogo,
+    link: "https://regnrelief.com/",
     technologies: ["v0", "Next.js", "Adobe InDesign", "ClickUp"],
   },
 ];
