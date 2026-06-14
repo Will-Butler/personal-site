@@ -64,7 +64,7 @@ const Home = () => {
           duration: 0.8,
           ease: "power2.out",
         },
-        "-=0.7"
+        "-=0.7",
       );
 
       tl.to(
@@ -74,7 +74,7 @@ const Home = () => {
           duration: 0.5,
           ease: "bounce.out",
         },
-        "-=.8"
+        "-=.8",
       );
 
       // First l wobble
@@ -85,7 +85,7 @@ const Home = () => {
           duration: 0.4,
           ease: "power2.in",
         },
-        "-=.6"
+        "-=.6",
       );
       tl.to(
         "#letter-l1",
@@ -94,7 +94,7 @@ const Home = () => {
           duration: 0.5,
           ease: "power2.out",
         },
-        "-=.2"
+        "-=.2",
       );
 
       // tl.to(
@@ -115,7 +115,7 @@ const Home = () => {
           duration: 0.6,
           ease: "power2.out",
         },
-        "-=0.4"
+        "-=0.4",
       );
 
       // First l stabilizes
@@ -126,7 +126,7 @@ const Home = () => {
           duration: 0.5,
           ease: "elastic.out(1, 0.3)",
         },
-        "-=0.3"
+        "-=0.3",
       );
 
       // After letter animations complete, reveal everything else together
@@ -142,7 +142,7 @@ const Home = () => {
           duration: 1,
           stagger: 0.1,
         },
-        "+=0.4"
+        "+=0.4",
       );
 
       tl.to(
@@ -152,7 +152,7 @@ const Home = () => {
           duration: 1.2,
           ease: "elastic.out(1, 0.3)",
         },
-        "-=1.8"
+        "-=1.8",
       );
 
       // Move white background behind everything and fade it out
@@ -163,7 +163,7 @@ const Home = () => {
           autoAlpha: 0,
           duration: 0.5,
         },
-        "-=1.8" // Slightly overlap with the reveal animation
+        "-=1.8", // Slightly overlap with the reveal animation
       );
     }, homeRef);
 
@@ -240,7 +240,7 @@ const Home = () => {
 
       <div className="home-attribute-container">
         <div className={`home-attribute-title ${montserrat.className}`}>
-          Programmer.
+          Builder.
         </div>
         <div className={`home-attribute-title ${montserrat.className}`}>
           Designer.

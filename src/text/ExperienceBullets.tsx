@@ -3,11 +3,28 @@ import Link from "next/link";
 
 //TODO: link certain bullets to work that was completed (ie. UniFounders, Music, articles)
 export const experienceBullets = {
+  NCIDEA_BULLET1:
+    "Support early-stage founders across the North Carolina entrepreneurial ecosystem.",
+  NCIDEA_BULLET2:
+    "Evaluate startup applications and business models, providing analysis to help guide funding and program decisions.",
+  NCIDEA_BULLET3:
+    "Conduct market and competitive research to assess venture viability and growth potential for emerging companies.",
+  NCI_BULLET1:
+    "Co-designed role supporting commercialization strategy for NCInnovation's portfolio of university research teams across North Carolina.",
+  NCI_BULLET2:
+    "Map the statewide vendor ecosystem for grant-funded research teams and support post-grant commercialization process design.",
+  NCI_BULLET3: "Work directly with portfolio teams on transition planning.",
+  REGN_BULLET1:
+    "Lead data, economic strategy, and systems analysis for a pro-bono disaster recovery consultancy, directing a 6-person business team supporting nonprofit operations and partner project feasibility.",
+  REGN_BULLET2:
+    "Drive funding strategy for a $7.5M community redevelopment project (Asheville River Arts Creative Campus), evaluating CDBG-DR vs. private funding pathways and developing revenue models to subsidize artist space.",
+  REGN_BULLET3:
+    "Built core organizational infrastructure for an early-stage nonprofit, including 501(c)(3) formation support, internal communication systems, and the organization's website.",
   UNC_BULLET1:
     "Masters in Business Administration | Peter G.C. Mallinson Full-Tuition Fellowship Recipient | Class of 2027",
   UNC_BULLET2:
     "Concentrations: Entrepreneurship; Technology Innovation and Product Management",
-    UNC_BULLET3:
+  UNC_BULLET3:
     "President, Entrepreneurship and Venture Capital Club | VP of Operations, Sports and Entertainment Business Club",
   UNIFOUNDERS_BULLET1: (
     <>

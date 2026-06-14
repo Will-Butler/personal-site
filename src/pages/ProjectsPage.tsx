@@ -5,7 +5,7 @@ import { montserrat, openSans } from "../styles/fonts";
 import UnifoundersImage from "../../public/UnifoundersLogo.png";
 import VidInterviewerLogo from "../../public/VidInterviewerLogo.png";
 import TIWWLogo from "../../public/TIWWLogo.png";
-import REGNLogo from "../../public/regn.png";
+import REGNLogo from "../../public/REGNLogo.png";
 import NavButton from "@/subcomponents/NavButton";
 // Import other project images as needed
 

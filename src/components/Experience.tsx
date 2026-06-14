@@ -7,6 +7,9 @@ import uva from "../../public/uva.png";
 import taiwan from "../../public/taiwan.png";
 import unifounders from "../../public/UnifoundersLogo.png";
 import unc from "../../public/UNCLogo.png";
+import regn from "../../public/REGNLogo.png";
+import nci from "../../public/NCILogo.png";
+import ncidea from "../../public/NCIDEALogo.png";
 import { experienceBullets } from "../text/ExperienceBullets";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
@@ -51,8 +54,47 @@ const Experience = () => {
       </div>
       <div className="experience__card-container">
         <ExperienceCard
+          id="card8"
+          time="Jun 2026 - Present"
+          organization="NCInnovation"
+          position="Commercial Transition Intern"
+          location="Durham"
+          logo={nci}
+          content={[
+            experienceBullets["NCI_BULLET1"],
+            experienceBullets["NCI_BULLET2"],
+            experienceBullets["NCI_BULLET3"],
+          ]}
+        />
+        <ExperienceCard
+          id="card7"
+          time="Nov 2025 - Present"
+          organization="REGN"
+          position="Co-Founder & Business Committee Head"
+          location="Remote"
+          logo={regn}
+          content={[
+            experienceBullets["REGN_BULLET1"],
+            experienceBullets["REGN_BULLET2"],
+            experienceBullets["REGN_BULLET3"],
+          ]}
+        />
+        <ExperienceCard
+          id="card8"
+          time="Sep 2025 - Present"
+          organization="NC IDEA"
+          position="Startup Analyst Associate"
+          location="Durham"
+          logo={ncidea}
+          content={[
+            experienceBullets["NCIDEA_BULLET1"],
+            experienceBullets["NCIDEA_BULLET2"],
+            experienceBullets["NCIDEA_BULLET3"],
+          ]}
+        />
+        <ExperienceCard
           id="card6"
-          time="Aug 2025 - Current"
+          time="Aug 2025 - Present"
           organization="UNC"
           position="Student"
           location="Chapel Hill"
@@ -65,7 +107,7 @@ const Experience = () => {
         />
         <ExperienceCard
           id="card5"
-          time="Jul 2023 - Current"
+          time="Jul 2023 - Present"
           organization="UniFounders"
           position="Founder & Software Developer"
           location="Remote"
