@@ -240,10 +240,10 @@ const Home = () => {
 
       <div className="home-attribute-container">
         <div className={`home-attribute-title ${montserrat.className}`}>
-          Builder.
+          Founder.
         </div>
         <div className={`home-attribute-title ${montserrat.className}`}>
-          Designer.
+          Builder.
         </div>
         <div className={`home-attribute-title ${montserrat.className}`}>
           Writer.
