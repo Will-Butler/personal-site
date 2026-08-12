@@ -6,6 +6,8 @@ import UnifoundersImage from "../../public/UnifoundersLogo.png";
 import VidInterviewerLogo from "../../public/VidInterviewerLogo.png";
 import TIWWLogo from "../../public/TIWWLogo.png";
 import REGNLogo from "../../public/REGNLogo.png";
+import MachledgeLogo from "../../public/MachledgeLogo.svg";
+import PaletteLogo from "../../public/PaletteLogo.png";
 import NavButton from "@/subcomponents/NavButton";
 // Import other project images as needed
 
@@ -49,6 +51,22 @@ const projects: ProjectCard[] = [
     image: REGNLogo,
     link: "https://regnrelief.com/",
     technologies: ["v0", "Next.js", "Adobe InDesign", "ClickUp"],
+  },
+  {
+    title: "Machine Legibility",
+    description:
+      "A studio that converts domain knowledge into machine-readable data and builds the agents that can act on it.",
+    image: MachledgeLogo,
+    link: "https://getmachinelegibility.com/",
+    technologies: ["Claude Code", "Adobe InDesign", "ClickUp"],
+  },
+  {
+    title: "Palette",
+    description:
+      "A Digital Audio Workstation-integrated AI co-producer that bridges the gap between creative taste and technical execution.",
+    image: PaletteLogo,
+    link: "https://trypaletteapp.com/",
+    technologies: ["Claude Code", "Codex", "Adobe InDesign", "ClickUp"],
   },
 ];
 

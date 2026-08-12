@@ -19,7 +19,7 @@ export const experienceBullets = {
   REGN_BULLET2:
     "Drive funding strategy for a $7.5M community redevelopment project (Asheville River Arts Creative Campus), evaluating CDBG-DR vs. private funding pathways and developing revenue models to subsidize artist space.",
   REGN_BULLET3:
-    "Built core organizational infrastructure for an early-stage nonprofit, including 501(c)(3) formation support, internal communication systems, and the organization's website.",
+    "Support $40M+ restoration effort of eight burnt-down historic structures for the Lahaina Restoration Foundation, consulting on cashflow management, fundraising, PR, and operations.",
   UNC_BULLET1:
     "Masters in Business Administration | Peter G.C. Mallinson Full-Tuition Fellowship Recipient | Class of 2027",
   UNC_BULLET2:
@@ -34,15 +34,16 @@ export const experienceBullets = {
         href="https://unifounders.onrender.com"
         target="_blank"
       >
-        a website
+        a platform
       </a>{" "}
-      to connect university alumni with students working on startups and/or
-      personal brands.
+      to advise and connect 20+ student startup founders across 3 universities
+      with alumni mentors.
     </>
   ),
   UNIFOUNDERS_BULLET2:
     "Provide tailored consulting to each active startup on the platform.",
-  UNIFOUNDERS_BULLET3: "Obtained over 200 signups from prospective users!",
+  UNIFOUNDERS_BULLET3:
+    "Partnered with and served as CRO of BUILT, a UVA-backed, AI-powered tech transfer platform matching research faculty with commercial partners.",
   GAP_YEAR_BULLET1:
     "Founded UniFounders, a startup focused on supporting university student founders. Worked as product manager and designer, software developer, and marketing lead.",
   GAP_YEAR_BULLET2:

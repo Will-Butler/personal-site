@@ -70,7 +70,9 @@ body {
   align-items: center;
   width: 100%;
   opacity: 0;
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
   transition-delay: 0s;
   pointer-events: none;
   position: absolute;
@@ -230,7 +232,7 @@ li.slide {
 
 .about__headshot {
   border-radius: 100px;
-  max-width: 22vw;
+  max-width: 16vw;
   max-height: 100%;
   position: relative;
   margin-right: 3vw;
@@ -964,7 +966,8 @@ li.slide {
   height: auto;
   position: absolute;
   opacity: 0.5;
-  animation: moveX 10s linear 0s infinite alternate,
+  animation:
+    moveX 10s linear 0s infinite alternate,
     moveY 8s ease-in-out 0s infinite alternate;
   filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.3));
   pointer-events: none;

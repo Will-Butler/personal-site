@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import Image from "next/image";
-import headshot from "../../public/tundyheadshot3.png";
+import headshot from "../../public/ProfessionalHeadshot.jpg";
 import { openSans, montserrat, playfairDisplay } from "../styles/fonts";
 import { aboutSections } from "@/text/AboutSections";
 import gsap from "gsap";
